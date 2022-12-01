@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Elisabeth Edert">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ausbau eines Campervans</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Alle Übersetzungen mit https://www.deepl.com/translator -->
+
+<body>
+
+    <!-- Im Header ist der obere Balken mit Navigation und Sprachübersetzung, immer zu sehen -->
+    <header>
+        <div id="top-bar" class="c1"></div>
+        <!-- Titelbild und Überschrift -->
+        <section class="c1">
+            <div class="flex-text-img-top">
+                <div class="ueberschrift">
+                    <h1 class="de">Von der Idee <br> zum Campervan</h1>
+                    <h1 class="en">From the idea <br> to a campervan</h1>
+                    <p class="de">Was Du bei der Planung beachten musst -
+                        über den Kabelquerschnitt zum richtigen Material</p>
+                    <p class="en">What you need to consider during planning -
+                        about cable cross-section to the right material</p>
+                </div>
+                <div class="bild">
+                    <img src="images/header.png" alt="Headerbild mit Camper">
+                </div>
+            </div>
+        </section>
+    </header>
+    <div id="content">
+        <aside id="left">
+            <!-- Top Navigations Menu -->
+            <div class="mainnav">
+                <div id="nav">
+                    <div class="sichtbar"><a href="#"><img src="images/logo.svg" alt="Camperlogo"></a></div>
+                    <div class="menubars" onclick="toggle()">
+                        <input type="checkbox" id="menu">
+                        <label class="hamburg">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="ankertags">
+                    <a class="de" href="#planung">Planung</a>
+                    <a class="de" href="#besichtigung-kauf">Besichtigung<br> & Kauf</a>
+                    <a class="de" href="#ueberlegungen">Überlegungen<br>am Fahrzeug</a>
+                    <a class="de" href="#reinigung">Fahrzeug reinigen</a>
+                    <a class="de" href="#rechner">Kabel-Rechner</a>
+                    <a class="de" href="#arbeitsplatz-einrichten">Arbeitsplatz <br> einrichten</a>
+                    <a class="de" href="#erste-umbauten">Erste Umbauten</a>
+                    <a class="de" href="#heizung-licht">Heizung & Licht</a>
+                    <a class="de" href="#moebelbau">Möbelbau <br>& Verbraucher</a>
+                    <a class="de" href="#probewohnen">Probe-Wohnen</a>
+                    <a class="de" href="#verkleidung">Verkleidung <br> & Dekoration</a>
+                    <a class="de" href="#tuev">TÜV-Abnahme</a>
+                    <a class="de" href="#ertse-reise">Erste Reise</a>
+                    <a class="de" href="#aber">Aber...</a>
+                    <a class="de" href="impressum.html">Impressum</a>
+                    <a class="en" href="#planung">Planing</a>
+                    <a class="en" href="#besichtigung-kauf">Visiting<br>& purchase</a>
+                    <a class="en" href="#ueberlegungen">Considerations</a>
+                    <a class="en" href="#reinigung">Vehicle cleaning</a>
+                    <a class="en" href="#rechner">Cable cross<br>calculator</a>
+                    <a class="en" href="#arbeitsplatz-einrichten">Set up<br>workplace</a>
+                    <a class="en" href="#erste-umbauten">First conversions</a>
+                    <a class="en" href="#heizung-licht">Heating & Light</a>
+                    <a class="en" href="#moebelbau">Furniture making</a>
+                    <a class="en" href="#probewohnen">Try out</a>
+                    <a class="en" href="#verkleidung">Cladding<br>& decoration</a>
+                    <a class="en" href="#tuev">TÜV inspection</a>
+                    <a class="en" href="#ertse-reise">First<br>real journey</a>
+                    <a class="en" href="#aber">But...</a>
+                    <a class="en" href="impressum.html">Imprint</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- In dem Main-Abschnitt sind alle Sections mit Inhalten -->
+        <main id="middle">
+
+            <!-- Section zum Schritt Planung -->
+            <hr id="planung">
+            <section class="c3">
+                <div class="h2-p-box">
+                    <h2 class="de">Planung</h2>
+                    <h2 class="en">Planing</h2>
+                    <p class="de"> Das wichtigste noch vor dem Kauf ist die Planung deines Vans.
+                        Hier legst du fest, welches das richtige Fahrzeugmodell für dich
+                        ist und was du von dem Auto während deinen Reisen erwartest.
+                        Reicht dir ein Fahrzeug in Caddy Größe, in dem du schnell die
+                        Sitze zum Bett umklappen kannst? Oder möchtest du einen großen
+                        Kastenwagen ausbauen, in dem du auch kochen kannst und in dem
+                        vielleicht sogar eine Nasszelle integriert ist? Überlege auch
+                        wie alt dein Auto sein maximal sein sollte, wenn du nach einem
+                        Gebrauchtwagen schaust.</p>
+                    <p class="en">The most important thing to do before you buy is to plan your van.
+                        Here you determine which is the right vehicle model for you and what you expect
+                        and what you expect from the car during your travels.
+                        Is a Caddy size vehicle enough for you, in which you can quickly fold the
+                        seats into a bed? Or do you want a large
+                        van, in which you can also cook and which might even have an integrated
+                        maybe even a wet cell is integrated? Also consider
+                        how old your car should be at most, when you are looking for a
+                        used car.</p>
+                </div>
+                <div class="drei-boxen">
+                    <div class="boxen">
+                        <img src="images/tuev.jpg" alt="Cover des TÜV-Merkblattes">
+                        <p class="de"><b>Bedürfnisse planen</b><br>
+                            Liste auf, was du alles ins Auto einbauen möchtest und beachte die TÜV-Vorschriften
+                        </p>
+                        <p class="en"><b>Needs planning</b><br>
+                            List everything you want to install in your car and follow the regulations of TÜV
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/modellmasse.jpg" alt="Fiat Ducat Zeichnung, Maße des Modells L1 H1">
+                        <!-- Bildquelle: https://www.funcar.at/transporter-mieten/kastenwagen-115-m/fiat-ducato-mittel-l2-h2/ -->
+                        <p class="de"><b>Modell festlegen</b><br>
+                            Auf der Basis deiner Bedüfnisse kannst du nach Basismodellen für deinen Camper suchen
+                        </p>
+                        <p class="en"><b>Choose model</b><br>
+                            Based on your needs you can search for base models for your camper
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/preise.jpg" alt="Auflistung einiger Preise zum Thema Elektrik">
+                        <p class="de"><b>Kostenüberblick schaffen</b><br>
+                            Recherchiere vorher, was dich der Ausbau inklusive Fahrzeug etwa insgesamt kosten
+                            wird
+                        </p>
+                        <p class="en"><b>Create a cost overview</b><br>
+                            Research beforehand what the expansion including the vehicle will cost you in total.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt Besichtigung und Kauf -->
+            <hr id="besichtigung-kauf">
+            <section class="c4">
+                <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/kauf.jpg" alt="Autoschlüssel mit Anhängern">
+                    </div>
+                    <div class="text">
+                        <h2 class="de">Besichtigung und Kauf</h2>
+                        <h2 class="en">Visiting and purchase</h2>
+                        <p class="de">Kaufe nicht das erstbeste Auto,
+                            auch wenn du so schnell wie möglich dein neues
+                            Zuhause bei dir hättest. Vergleiche ausreichend,
+                            fahre Probe und teste auch verschiedene Modelle
+                            die sich ähnlich sind. Falls du dir unsicher bist,
+                            hole dir von außerhalb Meinungen aus der Familie,
+                            von Bekannten oder sogar von dem KFZ-Mechatroniker
+                            deines Vertrauens dazu.
+                            <br><br>
+                            Wichtig ist immer das Probefahren des Autoa vor ort.
+                            Fahre dafür am besten auch eine kurze Strecke
+                            auf der Schnellstraße und bremse mehrmals kräftig
+                            um das Auto auch aus der Komfortzone zu bringen.
+                            Nimm auch hier gerne jemanden für eine zweite Meinung mit.
+                            <br><br>
+                            <b>Wenn alles passt - schlag zu! Es wird dein neues Zuhause!</b>
+                        </p>
+                        <p class="en">Don't buy the first car that comes along,
+                            even if you want your new home as soon as possible.
+                            home with you as soon as possible. Compare sufficiently,
+                            test drive and also test different models
+                            that are similar. If you are unsure,
+                            get outside opinions from the family,
+                            from acquaintances or even from your trusted car mechatronics
+                            of your confidence.
+                            <br><br>
+                            It is always important to test drive the car on site.
+                            The best way to do this is to drive a short distance
+                            on the expressway and brake hard several times
+                            to bring the car out of the comfort zone.
+                            Take someone with you for a second opinion.
+                            <br><br>
+                            <b>If everything fits - strike! It will be your new home!</b>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zu Überlegungen am Fahrzeug -->
+            <hr id="ueberlegungen">
+            <section class="c2">
+                <div class="untereinander-bild-text">
+                    <img src="images/schaltplan.jpg" alt="Ausschnitt aus einem Schaltplan für den Van">
+                    <h2 class="de">Überlegungen am Fahrzeug</h2>
+                    <h2 class="en">Considerations on the car</h2>
+                    <p class="de">Jetzt, wo du deinen Van bei dir hast, kann es losgehen mit den
+                        ersten Vorbereitungen. Mit der Liste deiner Wünsche an den
+                        Ausbau, kannst du nun am Fahrzeug vor dir den ersten Überblick
+                        machen. Du kannst das Auto selber genau ausmessen und überlegen
+                        wo genau was hinkommen soll. Helfen kann es dir dabei, wenn du
+                        mit Crepeband die Möbelgrundrisse auf dem Boden abklebst.
+                        Auch eine Skizze auf Papier mit den richtigen Maßen oder
+                        sogar mithilfe eines Zeichenprogramms in 2D oder 3D am Rechner.
+                        <br><br>
+                        Für die Elektrik, die im Auto installiert werden soll,
+                        ist ein Schaltplan sinnvoll. Die Komponenten, die du einbauen
+                        möchtest haben die notwenigen Installationshinweise in ihren
+                        Spezifikationen enthalten. Dort kannst du nachschauen, welche
+                        Sicherungen etc. du noch benötigst. Überlege auch frühzeitig,
+                        wo du die Elektrik unterbringen möchtest und wo ggf. die
+                        Standheizung oder Wasserkanister untergebracht werden sollen.
+                    </p>
+                    <p class="en">Now that you have your van with you, you can start with the first preparations.
+                        first preparations. With the list of your wishes for the
+                        you can now make the first overview of the vehicle in front of you.
+                        make. You can measure the car exactly yourself and think about
+                        where exactly what should go. It can help you if you
+                        the furniture floor plan on the floor with crepe tape.
+                        You can also make a sketch on paper with the right dimensions or even
+                        even with the help of a drawing program in 2D or 3D on the computer.
+                        <br><br>
+                        For the electrical system to be installed in the car,
+                        a wiring diagram is useful. The components you want to install
+                        have the necessary installation instructions in their specifications.
+                        specifications. There you can check which fuses
+                        fuses etc. you still need. Also consider early on,
+                        where you want to install the electrical system and where you want to put the
+                        heater or water canisters are to be accommodated.
+                    </p>
+                </div>
+            </section>
+            <!-- Section Schritt Reinigung des Fahrzeugs zur Vorbereitung -->
+            <hr id="reinigung">
+            <section class="c3">
+                <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/reinigung.jpg" alt="Bremsenreiniger und Lappen im Auto">
+                    </div>
+                    <div class="text">
+                        <h2 class="de">Fahrzeug reinigen</h2>
+                        <p class="de">Je nachdem, wozu das Fahrzeug vorher geniednt hat,
+                            solltest du es einmal von Grund auf reinigen. Es
+                            lagert sich unheimlich viel Sand auch unter der
+                            Bodenplatte ab und hinter der Verkleidung sammelt sich
+                            viel Staub an. Vorallem wenn du mit selbstklebenden
+                            Isoliermaterialien arbeiten möchtest, ist eine
+                            staubfreie Oberfläche sinnvoll, um ein möglichst
+                            gutes Ergebnis zu erzielen. Um auf dem Blech Fett
+                            und Staub zu entfernen, kannst du Bremsenreiniger
+                            benutzen.
+                        </p>
+                        <h2 class="en">Vehicle cleaning</h2>
+                        <p class="en">Depending on what the vehicle was previously used for,
+                            you should clean it once from scratch. There
+                            a lot of sand also accumulates under the floor plate
+                            under the floor panel and a lot of dust accumulates behind the
+                            a lot of dust. Especially if you want to work with self-adhesive
+                            insulating materials, a dust-free surface is
+                            surface is useful to achieve the best possible
+                            good result. To remove grease and dust from the
+                            and dust on the sheet metal, you can use brake cleaner
+                            can be used.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Rechner des richtigen Kabelquerschnitts -->
+            <hr id="rechner">
+            <section class="c4">
+                <div class="rechner">
+                    <div class="h2-p-box">
+                        <h2 class="de">Rechner für den richtige Kabelquerschnitt 12V</h2>
+                        <p class="de">Nach der Reinigung kannst du die Planung der Elektrik am Auto vornehmen. Elektrik
+                            im Auto kann einen super Luxus bringen, sie sollte aber richtig installiert werden.
+                            Wenn du dir da unsicher bist, ist es nicht verkehrt dir an dieser Stelle Hilfe dazuzuholen,
+                            denn falsch oder unsauber verlegt können Kabel überhitzen und zu Kabelbränden führen.
+                            Ein großer Schritt zur Sicherheit der Elektrik ist daher auch der richtige Kabelquerschnitt
+                            für die entsprechenden Komponenten. Dieser wird wie folgt berechnet:
+                        </p>
+                        <h2 class="en">Calculator for the correct cable cross section 12V</h2>
+                        <p class="en">After cleaning, you can plan the electrical system on the car. Electrics
+                            in the car can bring super luxury, but it should be installed correctly.
+                            If you are unsure, it is not wrong to get help at this point,
+                            because incorrectly or improperly installed cables can overheat and lead to cable fires.
+                            A big step to the safety of the electrical system is therefore the correct cable
+                            cross-section
+                            for the corresponding components.
+                            for the corresponding components. This is calculated as follows:
+                        </p>
+
+                        <p class="de"><b><br> A = ( I x 0,0175 x L x 2 ) / (fk x U)</b></p>
+                        <li class="de">I ist die maximale Stromstärke in Ampere</li>
+                        <li class="de">0,0175 ist ist der spezifische Widerstand von Kupfer in Ohm x mm2 / m</li>
+                        <li class="de">L ist die Kabellänge in eine Richtung (deshalb wird sie mit 2 Multipliziert)</li>
+                        <li class="de">fk ist der Verlustfaktor, Beispiel: 1%, sind 0,01</li>
+                        <li class="de">U ist die Spannung</li>
+
+                        <p class="de"><b><br>Verlustfaktoren</b></p>
+                        <li class="de">Für LED und normale Lampen sind 10% ok</li>
+                        <li class="de">Für Kühlschrank, Fernseher, Ladegeräte etc. 4%</li>
+                        <li class="de">Für Solaranlagen werden maximal 1% empfohlen</li>
+
+                        <p class="en"><b><br> A = ( I x 0,0175 x L x 2 ) / (fk x U)</b></p>
+                        <li class="en">I is the maximum current in amperes</li>
+                        <li class="en">0,0175 is the specific resistance of copper in Ohm x mm2 / m</li>
+                        <li class="en">L is the cable length in one direction (therefore it is multiplied by 2)</li>
+                        <li class="en">fk is the loss factor, example: 1%, are 0,01</li>
+                        <li class="en">U is the voltage</li>
+
+                        <p class="en"><b><br>Loss factors</b></p>
+                        <li class="en">For LED and normal lamps 10% is ok</li>
+                        <li class="en">For refrigerator, TV, chargers, etc. 4%.</li>
+                        <li class="en">A maximum of 1% is recommended for solar systems</li>
+                    </div>
+                    <div class="eingabe">
+                        <p class="de"><b>Länge des Kabels (nur eine Strecke in Meter):</b></p>
+                        <label class="de" for="kabellaenge">
+                            <input id="kabellaenge" name="kabellaenge" type="text">
+                        </label>
+                        <p class="de"><b>Maximaler Strom in Ampere:</b></p>
+                        <label class="de" for="maxstrom">
+                            <input id="maxstrom" name="maxstrom" type="text">
+                        </label>
+                        <p class="de"><b>Verlustfaktor in Prozent:</b></p>
+                        <label class="de" for="verlustfaktor">
+                            <input id="verlustfaktor" name="verlustfaktor" type="text">
+                        </label>
+                        <p class="de"><b>Spannung in Volt (12 V sind zumeist der richtige Wert):</b></p>
+                        <label class="de" for="spannung">
+                            <input id="spannung" name="spannung" type="text">
+                        </label>
+                        <p class="de">Dein Kabelquerschnitt für diesen Verbraucher sollte
+                            <span class="berechnet" data-ref="ausgabe" data-fallback>0,00</span>
+                            mm haben
+                        </p>
+                        <p class="en"><b>Length of the cable (only one distance in meters):</b></p>
+                        <label class="en" for="kabellaenge">
+                            <input id="kabellaenge" name="kabellaenge" type="text">
+                        </label>
+                        <p class="en"><b>Maximum current in amps:</b></p>
+                        <label class="en" for="maxstrom">
+                            <input id="maxstrom" name="maxstrom" type="text">
+                        </label>
+                        <p class="en"><b>Loss factor in percent:</b></p>
+                        <label class="en" for="verlustfaktor">
+                            <input id="verlustfaktor" name="verlustfaktor" type="text">
+                        </label>
+                        <p class="en"><b>Voltage in volts (12 V is mostly the correct value):</b></p>
+                        <label class="en" for="spannung">
+                            <input id="spannung" name="spannung" type="text">
+                        </label>
+                        <p class="en">Your cable cross section for this consumer should be
+                            <span class="berechnet" data-ref="ausgabe" data-fallback>0,00</span>
+                            mm
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt Arbeitsplatz einrichten -->
+            <hr id="arbeitsplatz-einrichten">
+            <section class="c3">
+                <div class="flex-img-text">
+                    <div class="text">
+                        <h2 class="de">Arbeitsplatz einrichten</h2>
+                        <p class="de">Bevor es dann nun endlich zur Sache geht brauhcst du einen
+                            geeigneten Arbeitsplatz. Was dabei auf keinen Fall fehlen
+                            darf ist ein Tisch. Ob du die Isolierung zuschneiden, Holzplatten
+                            für den Möbelbau zusägen oder deinen Kaffee abstellen möchtest,
+                            du bauchst eine ausreichend große, robuste und stabile Abstellfläche.
+                            <br><br>
+                            Außerdem solltest du schon mal grob das Werkzeug und die
+                            Arbeitsgeräte zurecht legen, die du brauchen wirst. Das erspart
+                            dir später Zeit, in der du sonst die Arbeit unterbrechen musst,
+                            um entsprechendes zu holen.
+                            <br><br>
+                            Wenn du dann alles hast, kann es endlich losgehen!
+                        </p>
+                        <h2 class="en">Set up workplace</h2>
+                        <p class="en">Before you can finally get down to business, you need a suitable
+                            suitable workplace. What must not be missing in any case
+                            is a table. Whether you want to cut the insulation to size, saw the
+                            for the furniture construction or you want to put down your coffee,
+                            you need a sufficiently large, robust and stable storage surface.
+                            <br><br>
+                            In addition, you should already roughly the tools and the
+                            tools and equipment that you will need. This will save
+                            time later, when you would otherwise have to interrupt your work,
+                            to fetch the appropriate items.
+                            <br><br>
+                            Then, when you have everything, you can finally get started!
+                        </p>
+                    </div>
+                    <div class="bild">
+                        <img src="images/arbeitsplatz.jpg" alt="Tauchsäge und ein Kaffee auf einer Sägeunterlage">
+                    </div>
+                </div>
+            </section>
+            <!-- Section mit Zitat durch Auflockerung beim Lesen -->
+            <section class="c4">
+                <div class="zitat">
+                    <h3 class="de">"Mir hat schon immer eins geschwant: <br>
+                        Erstens kommt es anders, und zweitens, als man plant."
+                    </h3>
+                    <p class="de">Mach dir nichts draus, wenn nicht alles sofort klappt, oder doch
+                        anders wird, als in der Planung. Das gehört dazu und macht den
+                        Ausbau zum Schluss einzigartig!
+                    </p>
+                    <h3 class="en">"I've always had one thing in mind: <br>
+                        First, things don't turn out the way you plan, and second, they don't turn out the way you
+                        plan."
+                    </h3>
+                    <p class="en">Don't worry if everything doesn't work out right away, or if it turns out
+                        different than in the planning. That is part of it and makes the
+                        the expansion at the end is unique!
+                    </p>
+                </div>
+            </section>
+            <!-- Section zum Schritt erste Umbauten -->
+            <hr id="erste-umbauten">
+            <section class="c2">
+                <div class="h2-p-box">
+                    <h2 class="de">Die ersten Umbauten zum Wohnmobil</h2>
+                    <p class="de">Falls dein Fahrzeug noch nicht ausreichend Fenster hat, ist es sinnvoll
+                        die zusätzlichen Fenster einzubauen, bevor schon zu viel im Auto
+                        integriert ist. Zuerst ist es komisch Löcher in sein Auto zu sägen,
+                        doch es wird sich lohnen, wenn die Komponenten dann funktionieren.
+                        Auch ein Gepäckträger sollte an dieser Stelle und noch vor dem Einbau
+                        einer Holzdecke erfolgen. Im Inneren des Fahrzeugs kannst du mit dem
+                        Verlegen der Kabel beginnen und die noch freien Holme für Kabelkanäle
+                        nutzen. Die Vorbereitungen sind der erste Schritt zum Wohnmobil und eine
+                        gute Vorbereitung für die nächsten Ausbauschritte.
+                    </p>
+                    <h2 class="en">The first conversions to a campervan</h2>
+                    <p class="en">If your car does not have enough windows yet, it makes sense to
+                        the additional windows before too much is already integrated in the car.
+                        is integrated. At first it is strange to saw holes in your car,
+                        but it will be worth it when the components work.
+                        Also a luggage rack should be installed at this point and before the installation
+                        a wooden ceiling should be done. Inside the car you can start with the
+                        start laying the cables and use the still free spars for cable ducts.
+                        to be used. The preparations are the first step to the WOhnmobil and a
+                        good preparation for the next expansion steps.
+                    </p>
+                </div>
+                <div class="drei-boxen">
+                    <div class="boxen">
+                        <img src="images/fenster.jpg" alt="Der Ausschnitt in der Seitentür für ein Fenster">
+                        <p class="de"><b>Fenstereinbau</b>
+                            <br>
+                            Mit Crepeband kannst du vor dem Sägen die Schnittstelle abkleben, um Risse im Lack zu vermeiden.
+                        </p>
+                        <p class="en"><b>Window installation</b>
+                            <br>
+                            You can use crepe tape to mask the interface to prevent cracks in the paint.
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/solar.jpg" alt="Blick aufs Dach mit Solarplatten">
+                        <p class="de"><b>Solarplatten</b>
+                            <br>
+                            Wenn du Solar Platten auf dem Dach mitnehmen möchtest, sollten die sicher montiert werden.
+                        </p>
+                        <p class="en"><b>Solar panels</b>
+                            <br>
+                            If you want to take solar panels on the roof, they should be mounted securely.
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/kabellage.jpg" alt="Kabel werden verlegt">
+                        <p class="de"><b>Isolierung und Kabellage</b>
+                            <br>
+                            Innen kannst du die Grundlagen mit Isolierung und dem Verlegen der ersten Kabel machen.
+                        </p>
+                        <p class="en"><b>Insulation and cable position</b>
+                            <br>
+                            Inside you can do the basics with insulation and laying the first cables.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt Heizung & Licht einbauen -->
+            <hr id="heizung-licht">
+            <section class="c3">
+                <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/heizung.jpg"
+                            alt="Die Heizung kurz vor dem Einbau, neben dem Loch im Fahrzeugboden">
+                    </div>
+                    <div class="text">
+                        <h2 class="de">Heizung und Licht</h2>
+                        <p class="de">Falls du dich für eine Standheizung entscheiden solltest, sollte sie an dieser
+                            Stelle eingebaut werden, da noch genug Platz auf dem Boden ist.
+                            Praktisch ist außerdem, wenn du im Winter ausbauen solltest kann
+                            die Heizung in ihren ersten Einsätzen sehr angenehm sein. Auch
+                            die frühe Installation von Licht kann dir Baulampen und Strahler
+                            im Auto ersparen, wenn es früh dunkel wird. Die Lampen können
+                            hierfür auch vorläufig festgeklebt werden.
+                            <br><br>
+                            Achtung: Solltest du das Auto auch während des Ausbaus schon fahren, achte auf eine sichere
+                            Anbringung der Komponenten, damit diese lose angebracht keine Schäden nehmen.
+                        </p>
+                        <h2 class="en">Heating and light</h2>
+                        <p class="en">If you decide to install a parking heater, it should be installed at this point,
+                            since there is still enough space on the floor.
+                            It is also practical, if you want to remove in the winter, the heater can be
+                            the heater can be very comfortable in its first use. Also
+                            the early installation of light can save you construction lamps and spotlights in the car.
+                            in the car when it gets dark early. The lamps can
+                            also be temporarily glued for this purpose.
+                            <br><br>
+                            Caution: If you are already driving the car during disassembly, make sure the components
+                            are securely fastened so that they are not damaged when loosely attached.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt Möbelbau -->
+            <hr id="moebelbau">
+            <section class="c4">
+                <div class="flex-img-text">
+                    <div class="text">
+                        <h2 class="de">Möbelbau und Verbraucher</h2>
+                        <p class="de">Während des Möbelbaus sieht man schnell Fortschritte und man kann
+                            sich, wenn die Hauptcamperkomponenten im Auto sind, auch schon so
+                            langsam vorstellen wie es mal werden soll. Je sauberer du nachmisst,
+                            desto besser werden die Möbel.
+                            <br><br>
+                            Nach und nach können nun auch schon weitere Verbraucher integriert
+                            werden wie der Kühlschrank, Steckdosen oder die Wasserpumpe, wenn
+                            du im Küchenblock eine Spüle mit Wasserhahn einbauen möchtest.
+                        </p>
+                        <h2 class="en">Furniture making and consumer</h2>
+                        <p class="en">During the furniture construction you can quickly see progress and you can
+                            when the main camp components are in the car are already imagine how it will be. The cleaner
+                            you
+                            measure,
+                            the better the furniture will be.
+                            <br><br>
+                            Gradually, other consumers can now be integrated, too
+                            like the refrigerator, sockets or the water pump, if you want to install
+                            a sink with faucet in the kitchen block.
+                        </p>
+                    </div>
+                    <div class="bild">
+                        <img src="images/moebelbau-verbraucher.jpg"
+                            alt="Die ersten Möbel sind im Auto eingebaut, die Kiste ist noch in Arbeit">
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt Möbelbau -->
+            <hr id="probewohnen">
+            <section class="c3">
+                <div class="untereinander-bild-text">
+                    <img src="images/reise4.jpg" alt="Die erste Reise im Chaos">
+                    <h2 class="de">Probe-Wohnen!</h2>
+                    <p class="de">Fahr auch mal los, auch wenn du noch nichtganz fertig bist mit dem Umbau,
+                        du musst ja keine Weltreise unternehmen. Es hilft dir in der Praxis zu sehen,
+                        wo was noch pratisch wäre, was du alles mitnimmst und wo was verstaut werden
+                        könnte. Eine vorläufige Reise bringt dir neue Ideen und dein Ausbau wird noch
+                        etwas besser auf deine Bedürfnisse angepasst.
+                    </p>
+                    <h2 class="en">Try out!</h2>
+                    <p class="en">Go for a drive, even if you're not quite finished with the conversion,
+                        you don't have to make a trip around the world. It helps you to see in practice,
+                        where what would be pratic, what you take with you and where what could be stowed.
+                        A preliminary trip brings you new ideas and your expansion is still
+                        a little better adapted to your needs.
+                    </p>
+                </div>
+            </section>
+            <!-- Section zum Schritt Möbelbau -->
+            <hr id="verkleidung">
+            <section class="c4">
+                <div class="h2-p-box">
+                    <h2 class="de">Verkleidung und Dekoration</h2>
+                    <p class="de">Um die Islolierung zu verstecken und das Auto noch wohnlicher zu bekommen, bringt
+                        die Verkleidung von den Wänden eine ganze Menge. Auch die Anbringung von
+                        Gardinen, kleinen Aufbewahrungsmöglichkeiten macht dein Wohnmobil schon richtig
+                        gemütlich. Während deinen Probefahrten mit dem Camper hast du vielleicht
+                        gemerkt, was da für dich am passensten ist.
+                    </p>
+                    <h2 class="en">Cladding and decoration</h2>
+                    <p class="en">To hide the islolation and get the car even more homely, brings
+                        cladding from the walls quite a lot. Also the installation of
+                        curtains, small storage possibilities makes your camper already really
+                        cozy. During your test drives with the camper you have perhaps
+                        noticed what is most suitable for you.
+                    </p>
+                </div>
+                <div class="drei-boxen">
+                    <div class="boxen">
+                        <img src="images/verkleidung.jpg" alt="Die Verkleidung der Stauräume unter dem Bett">
+                        <p class="de"><b>Verkleidung</b>
+                            <br>
+                            Die Verleidung lässt den Innenraum Stück für Stück weniger nach einer Baustelle aussehen
+                        </p>
+                        <p class="en"><b>Cladding</b>
+                            <br>
+                            The cladding makes the interior look less like a construction site bit by bit
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/naehen.jpg" alt="Nähen der Gardinen mit der Nähmaschine ">
+                        <p class="de"><b>Näharbeiten</b>
+                            <br>
+                            Auf den Probereisen wurden Gardinen vielleicht noch provisorisch durch Tücher und Decken
+                            ersetzt
+                        </p>
+                        <p class="en"><b>Sewing works</b>
+                            <br>
+                            On the rehearsal tours curtains were perhaps provisionally replaced by cloths and blankets
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/aufbewahrung.jpg" alt="Kleine Aufbewahrungsmöglichkeiten an der Wand">
+                        <p class="de"><b>Aufbewahrung</b>
+                            <br>
+                            Jede noch so kleine Möglichkeit für Ablage ist vorallem für viele lose Gegenstände sehr
+                            praktisch
+                        </p>
+                        <p class="en"><b>Storage</b>
+                            <br>
+                            Every little possibility for storage is very practical especially for many loose items
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt TÜV-Abnahme -->
+            <hr id="tuev">
+            <section class="c2">
+                <div class="flex-img-text">
+                    <div class="text">
+                        <h2 class="de">TÜV Abnahme</h2>
+                        <p class="de">Die lange Arbeit ist geschafft und du kannst zum TÜV gehen und dein Wohnmobil
+                            begutachten lassen.
+                            Checke vorher noch einmal, ob du alle im Merkblatt stehenden Bedingungen erfüllt hast und
+                            mache
+                            einen Termin
+                            bei deiner bevorzugten Prüfstelle. Falls dein Fahrzeug keine gültige HU mehr hat, kannst du
+                            einen Termin dafür direkt mit vereinbaren. Häufig muss man mehrere Wochen auf einen Termin
+                            warten, du kannst den Termin
+                            also auch schon während der letzten Umbauten ausmachen.
+                            <br><br>
+                            Neben dem fertigen Ausbau kannst du schon einige papiere zusammentragen, die der Prüfer
+                            sehen
+                            möchte.
+                            Dazu gehören dein Peronalausweis, Fahrzeugschein und Fahrzeugbrief.
+                            <br><br>
+                            Solltest du einen Prüfer erwischen, der dir nicht zusagt oder Änderungen vorschlägt die über
+                            das
+                            Merkblatt hinaus gehen
+                            und dir unseriös vorkommen, ist es okay den Prüfer zu wechseln.
+                        </p>
+                        <h2 class="en">TÜV inspection</h2>
+                        <p class="en">The long work is done and you can go to the TÜV and have your motorhome inspected.
+                            Check beforehand if you have fulfilled all the conditions stated in the leaflet and make an
+                            appointment
+                            at your preferred inspection station. If your vehicle does not have a valid HU any more,
+                            you can make an appointment for it directly. Often you have to wait several weeks for an
+                            appointment,
+                            so you can make it during the last modifications.
+                            <br><br>
+                            In addition to the completed disassembly, you can already gather some papers that the
+                            inspector
+                            will want to see.
+                            These include your personal ID card, vehicle registration document and vehicle registration.
+                            <br><br>
+                            If you find an examiner who does not agree with you or proposes changes that go beyond the
+                            information sheet
+                            and seems dubious to you, it is okay to change the examiner.
+                        </p>
+                    </div>
+                    <div class="bild">
+                        <img src="images/tuev-mangelfrei.jpg" alt="Der TÜV hat den Ausbau als mangelfrei begutachtet">
+                    </div>
+                </div>
+            </section>
+            <!-- Section mit Zitat durch Auflockerung beim Lesen -->
+            <section class="c4">
+                <div class="zitat">
+                    <h3 class="de">Es ist ein Wohnmobil!!</h3>
+                    <p class="de">Du hast es geschafft! Die der Umbau wurde geprüft und dein Fahrzeug
+                        ist nun offiziell ein Wohnmobil. Das macht stolz!
+                    </p>
+                    <h3 class="en">It is a campervan!!</h3>
+                    <p class="en">You did it! The conversion has been checked and your vehicle
+                        is now officially a campervan. That makes you proud!
+                    </p>
+                </div>
+            </section>
+            <!-- Section zum Schritt erste Reise -->
+            <hr id="ertse-reise">
+            <section class="c3">
+                <div class="h2-p-box">
+                    <h2 class="de">Die erste richtige Reise</h2>
+                    <p class="de">Endlich kann es los gehen und die Welt kann vom Zuhause aus erkundet werden!
+                        Die ein oder anderen Gegenstände sollten allerdings vorher noch eingeladen werden... Teller,
+                        Becher,
+                        Besteck und was man sonst noch alles so an Klüngelkram braucht. Auch ein Feuerlöscher an Board
+                        ist
+                        nie
+                        verkehrt und gibt Sicherheit. Und wenn alles gepackt ist - auf gehts!
+                    </p>
+                    <h2 class="en">The first real journey</h2>
+                    <p class="en">Finally, it can go and the world can be explored from home!
+                        However, the one or other items should be invited before... Plates, cups,
+                        cutlery and whatever else you might need. Also a fire extinguisher on board
+                        is never wrong and gives security. And when everything is packed - let's go!
+                    </p>
+                </div>
+                <div class="drei-boxen">
+                    <div class="boxen">
+                        <img src="images/reise1.jpg" alt="Lesen im Camper">
+                        <p class="de"><b>Lesen im Camper</b>
+                            <br>
+                            Bei wechselhaftem Wetter kannst du gemütlich im Auto lesen und ganz in Ruhe entspannen.
+                        </p>
+                        <p class="en"><b>Reading in a camper</b>
+                            <br>
+                            In changeable weather you can read Books and magazines comfortably in the car and relax in
+                            peace.
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/reise2.jpg" alt="Frühstück draußen vor dem Camper">
+                        <p class="de"><b>Draußen frühstücken</b>
+                            <br>
+                            Nutze den größten Vorgarten den du jemals hattest (aber hinterlasse ihn anschließend
+                            sauber).
+                        </p>
+                        <p class="en"><b>Have breakfast outside</b>
+                            <br>
+                            Take advantage of the biggest front yard you've ever had (but leave it clean and take your
+                            trash).
+                        </p>
+                    </div>
+                    <div class="boxen">
+                        <img src="images/reise5.jpg" alt="Ausblick aus dem Seitenfenster ins Grüne">
+                        <p class="de"><b>Ausblick in die Natur</b>
+                            <br>
+                            Mit etwas Glück kannst du mittem im Grünen stehen. Denke aber an die dort geltenden Regeln.
+                        </p>
+                        <p class="en"><b>Nature view</b>
+                            <br>
+                            With a little luck you can stand in the middle of the green. But remember the rules that
+                            apply
+                            there.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section zum Schritt "Neverending-Project" -->
+            <hr id="aber">
+            <section class="c2">
+                <div class="h2-p-box">
+                    <h2 class="de">Aber...</h2>
+                    <p class="de">Wenn wir ehrlich sind, ist man nie fertig und man hat immer neue Ideen...</p>
+                    <h2 class="en">But...</h2>
+                    <p class="en">If we are honest, you are never finished and you always have new ideas...</p>
+                </div>
+                <button class="de"><a href="#arbeitsplatz-einrichten">Zurück zum Ausbau</a></button>
+                <button class="en"><a href="#arbeitsplatz-einrichten">Back to the removal</a></button>
+
+            </section>
+        </main>
+        <aside id="right">
+            <div id="sprache">
+                <button onclick="trans('en')">EN</button>
+                <button onclick="trans('de')">DE</button>
+            </div>
+        </aside>
+    </div>
+    <footer class="c1">
+        <p>Elisabeth Edert 2022</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,528 @@
+/* In dem gesamten Dokument wird die gleiche Schriftart verwendet:
+    - die Gill Sans ist eine Webfont und daher mit Internetzugang für alle Nutzer verwendbar
+    - die Farbe #4D4D4D ist ein dunkles grau und harmoniert besser als ein reines Schwarz mit den restlichen Farben
+*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4D4D4D;
+    margin: 0%;
+}
+
+/* Zeigt den englischen Text bei Aufruf der Seite nicht und zunächst nur den deutschen Text*/
+
+#ankertags .en,
+.en {
+    display: none;
+}
+
+.de {
+    display: block;
+}
+
+/* Header und Footer Design
+    - schlicht und umrahmend des inhaltsreichen Main-Abschnitts
+    - der Header soll fix bleiben, um jederzeit die darin enthaltenen Funktionen nutzen zu können
+*/
+
+#top-bar {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    padding: 0% 15% 20px 0%;
+    margin-top: 0px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+}
+aside {
+    background: #F5F5F5;
+}
+
+#left {
+    width: 15%;
+}
+
+#middle {
+    width: 75%;
+}
+
+#right {
+    width: 10%;
+}
+
+footer {
+    padding: 0% 15% 20px 15%;
+}
+
+footer p {
+    padding-top: 20px;
+}
+
+/* Definition Schriftgrößen
+    - die einzelnen Schriftgröße sollen sich voneinander abgrenzen um Kontraste zu schaffen
+    - um ein einheitliches Design zu schaffen sind die jeweiligen Schriftgrößen fest definiert und werden an anderen Stellen nicht verändert
+*/
+h1 {
+    font-size: 3.5em;
+    line-height: .9em;
+}
+
+h2 {
+    font-size: 2.0em;
+    line-height: 1.1em;
+}
+
+h3 {
+    font-size: 1.7em;
+    line-height: 1em;
+    font-style: italic;
+}
+
+.c1 p,
+.c1 h2,
+.c1 h3,
+.c2 p,
+.c2 h2,
+.c2 h3,
+.c3 p,
+.c3 h2,
+.c3 h3,
+.c4 p,
+.c4 h2,
+.c4 h3 {
+    /* margin unset reduziert ungewollte Lücken*/
+    margin: unset;
+}
+
+/* Section-Styles
+    - um etwas Lebendigkeit beim Scrollen in das Layout zu bringen und
+    die Sections mit einzelnen Themen voneinander abzugrenzen wurden verschiedene Hintergrundfarben eingesetzt
+
+    ein helles Grau
+    - angenehmer für das Auge als ein reines Weiß,
+    - diese Farbe wird auch für den Hintergrund der Texte verwendet, damit dort der Kontrast hoch ist und das Lesen angenehm ist
+    - Sections in der Farbe geben Ruhe in das Layout, da sich durch die vielen Bilder und weiteren Hintergrundfarben sehr viel Unruhe im Layout befindet
+    Grün-Töne
+    - eine lebendige und naütüliche Farbe, passt zum Thema Camping
+    - Grün ist die Komplementärfarbe von rot (dem Camper auf den Fotos)
+    dunkleres Grau
+    - für Buttons
+    - als dunklere Farbe auch im Hintergrund eingesetzt
+*/
+section {
+    height: fit-content;
+    margin-top: 0%;
+    padding: 50px 10% 50px 10%;
+
+}
+
+.c1,
+.c5 {
+    background-color: #F5F5F5;
+}
+
+.c2 {
+    background-color: #D3D8CB;
+}
+
+.c3 {
+    background-color: #D9D9D9;
+}
+
+.c4 {
+    background-color: #B9BCB4;
+}
+
+/* hr dient als Anker für die Sprungmarken, besitzt aber kein Design*/
+hr {
+    border: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    visibility: hidden;
+    height: 0px !important;
+    position: absolute;
+    margin: -90px;
+}
+
+/* Navigations-Styles
+    -schlicht und übersichtlich
+*/
+#sprache {
+    position: fixed;
+    left: 92%;
+    background: #F5F5F5;
+    width: 100%;
+    top: 10px;
+}
+
+button {
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    background-color: #D9D9D9;
+    margin-top: 10px;
+    padding: 10px; 
+}
+
+
+button:hover {
+    cursor: grab;
+}
+
+/* #sprache button {
+    display: inline-block;
+    border: none;
+    background-color: #D9D9D9;
+    margin-top: 10px;
+    padding: 10px;
+} */
+
+#sprache li {
+    margin-right: 25px;
+}
+
+#sprache ul {
+    list-style: none;
+    padding: 0%;
+}
+
+.mainnav {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    top: 10px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mainnav #ankertags {
+    display: block;
+    background: #F5F5F5;
+}
+
+/* Navigation links */
+#nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+}
+
+.menubars {
+    padding-left: 20px;
+    display: none;
+}
+
+.hamburg { 
+    display: block;
+    position: fixed; 
+    width: 75px; height: 50px;
+    margin-left: auto; margin-right: auto;
+    border-radius: 4px; 
+    cursor: grab;
+
+ }
+
+ .line { 
+    position: absolute; 
+    left:10px;
+    height: 4px; width: 25px; 
+    background: #4D4D4D; border-radius: 2px;
+    display: block; 
+    transition: 0.5s; 
+    transform-origin: center; 
+ }
+ 
+ .line:nth-child(1) { top: 12px; }
+ .line:nth-child(2) { top: 24px; }
+ .line:nth-child(3) { top: 36px; }
+ 
+ /* Bewegung der drei Spans, bwz Ausblenden des mittleren S */
+ #menu:checked + .hamburg .line:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+ }
+ 
+ #menu:checked + .hamburg .line:nth-child(2){
+    opacity:0;
+ }
+ 
+ #menu:checked + .hamburg .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+ }
+
+ 
+ input#menu {display:none}
+ /* test navi ende */
+
+.sichtbar {
+    /* Der sichtbare Teil des Menüs ist das Logo, über welches man von überall zurück zur Startseite gelangt.
+    Das ist schon gelerntes Wissen von Webseitennutzern und wird hier vorausgesetzt eingesetzt
+    */
+    margin-top: 10px;
+}
+
+.sichtbar img {
+    width: 28px;
+}
+
+#ankertags a {
+    color: #4D4D4D;
+    width: auto;
+    padding: 12px 20px 5px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.mainnav a.icon {
+    display: block;
+    position: absolute;
+    padding: 14px 20px;
+    left: 25px;
+    top: 10px;
+}
+
+.mainnav a:hover {
+    font-weight: 700;
+}
+
+/* Erste Section mit Titel und Bild */
+.flex-text-img-top {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 15%;
+}
+
+.ueberschrift {
+    margin-right: 2%;
+    margin-bottom: 1em;
+    width: 50%;
+}
+
+.bild {
+    width: 50%;
+}
+
+.bild img {
+    width: 100%;
+}
+
+/* Styles für Sections, die ein Div mit Text enthalten*/
+.h2-p-box {
+    background: #F5F5F5;
+    padding: 15px;
+}
+
+.h2-p-box h2 {
+    padding-bottom: 2%;
+}
+
+.h2-p-box a {
+    color: #4D4D4D;
+    width: auto;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+/* Styles für Sections, die ein Div mit drei nebeneinander stehenden Divs beinhalten welche Bild und einen darunter stehendem Text besitzen*/
+.drei-boxen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2%;
+}
+
+.boxen {
+    justify-content: center;
+    width: 35%;
+}
+
+.boxen img {
+    width: 100%;
+}
+
+.boxen p {
+    background: #F5F5F5;
+    padding: 5%;
+}
+
+/* Styles für Sections, die Bild & Text beinhalten, die Class ".bild" wird aus der ersten Titel-Section für diese Sections widerverwendet */
+.flex-img-text {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 50%;
+    padding: 15px;
+    background: #F5F5F5;
+
+}
+
+.text h2 {
+    padding: 2% 2% 2% 2%;
+}
+
+.text p {
+    padding: 0% 2% 2% 2%;
+}
+
+/* Styles für Sections, die ein Div mit Bild und darunter Text beinhalten*/
+.untereinander-bild-text {
+    padding-top: 2%;
+}
+
+.untereinander-bild-text img {
+    width: 100%;
+}
+
+.untereinander-bild-text p,
+.untereinander-bild-text h2 {
+    background: #F5F5F5;
+}
+
+.untereinander-bild-text h2 {
+    padding: 2% 2% 2% 2%;
+}
+
+.untereinander-bild-text p {
+    padding: 0% 2% 2% 2%;
+}
+
+/* Styles für Sections, die Zitate enthalten*/
+.zitat h3,
+.zitat p {
+    background: #F5F5F5;
+
+}
+
+.zitat h3 {
+    padding: 2% 2% 2% 2%;
+}
+
+.zitat p {
+    padding: 0% 2% 2% 2%;
+}
+
+/* Rechner */
+/* Inspiration:  https://www.w3schools.com/css/css_form.asp */
+.eingabe {
+    margin-top: 20px;
+}
+
+.eingabe input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.eingabe input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.eingabe input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Zusätzliche Styles für das Impressum */
+
+.c5 p {
+    margin-bottom: 60px;
+}
+
+.c5 h2,
+.c5 h3 {
+    margin-top: 0px;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Responsive Design
+*/
+
+/* Erster Unbruch bei 1200px*/
+@media only screen and (max-width: 1200px) {
+
+    /* Überschriften und Bilder werden dadurch nicht abgeschnitten */
+
+    #sprache {
+        left: 80%;
+    }
+
+    .flex-text-img-top {
+        flex-direction: column;
+    }
+
+    .flex-img-text {
+        flex-direction: column-reverse;
+    }
+
+    .bildrechts img,
+    .text {
+        width: 100%;
+    }
+
+    .bildrechts,
+    .text h2,
+    .text p {
+        margin-left: 0%;
+        padding-left: 0%;
+    }
+
+    .text h2 {
+        padding-bottom: 0%;
+    }
+
+    .bild {
+        width: 100%;
+    }
+
+    /* Navigation */
+    .mainnav #ankertags {
+        display: none;
+    }
+    .menubars {
+        display: block;
+    }
+}
+/* Zweiter Unbruch bei 600px*/
+
+@media only screen and (max-width: 600px) {
+
+    #sprache {
+        left: 75%;
+    }
+
+    /* Nebeneinander gestellte Boxen reihen sich untereinander ein */
+    .drei-boxen {
+        flex-direction: column;
+    }
+
+    .boxen {
+        width: 100%;
+    }
+
+    .untereinander-bild-text p,
+    .untereinander-bild-text h2 {
+        padding: 5%;
+    }
+
+}
