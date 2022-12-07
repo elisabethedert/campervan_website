@@ -34,12 +34,17 @@ function trans(sprache) {
   var spracheEn = document.getElementsByClassName("en");
   var spracheDe = document.getElementsByClassName("de");
 
+  var buttonEn = document.getElementById("button-en")
+  var buttonDe = document.getElementById("button-de")
+
   for (let i = 0; i < spracheEn.length; i++) {
     if (sprache === 'en') {
       console.log("EN gegklickt");
       spracheEn[i].style.display = "block";
+      buttonEn.style.fontWeight = "900";
     } else {
       spracheEn[i].style.display = "none";
+      buttonEn.style.fontWeight = "500";
     }
   } 
   
@@ -47,8 +52,28 @@ function trans(sprache) {
     if (sprache === 'en') {
       console.log("DE gegklickt");
       spracheDe[i].style.display = "none";
+      buttonDe.style.fontWeight = "500";
     } else {
       spracheDe[i].style.display = "block";
+      buttonDe.style.fontWeight = "900";
     }
   }
 }
+
+// Einfaden der Elemente 
+// Inspiration: https://youtu.be/T33NN_pPeNI
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=> {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } 
+    // else wird benötigt, wenn man mehr als einmal die Elemente einfaden lassen möchte
+    // Ich denke das wird an dieser Stelle aber zu viel und sorgt für zu viel Unruhe
+    // else {
+    //   entry.target.classList.remove("show");
+    // }
+  });
+}) ;
+
+const boxenEinfaden = document.querySelectorAll(".ueberschrift, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
+boxenEinfaden.forEach((element) => observer.observe(element));
