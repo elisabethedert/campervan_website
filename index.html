@@ -319,44 +319,61 @@
                         <li class="en">A maximum of 1% is recommended for solar systems</li>
                     </div>
                     <div class="eingabe">
-                        <p class="de"><b>Länge des Kabels (nur eine Strecke in Meter):</b></p>
-                        <label class="de" for="kabellaenge">
-                            <input id="kabellaenge" name="kabellaenge" type="text">
+                        <!-- <p class="de"><b>Länge des Kabels (nur eine Strecke in Meter):</b></p>
+                        <label class="de" for="kabellaenge-de">
+                            <input id="kabellaenge-de" name="kabellaenge" type="text">
                         </label>
                         <p class="de"><b>Maximaler Strom in Ampere:</b></p>
-                        <label class="de" for="maxstrom">
-                            <input id="maxstrom" name="maxstrom" type="text">
+                        <label class="de" for="maxstrom-de">
+                            <input id="maxstrom-de" name="maxstrom" type="text">
                         </label>
                         <p class="de"><b>Verlustfaktor in Prozent:</b></p>
-                        <label class="de" for="verlustfaktor">
-                            <input id="verlustfaktor" name="verlustfaktor" type="text">
+                        <label class="de" for="verlustfaktor-de">
+                            <input id="verlustfaktor-de" name="verlustfaktor" type="text">
                         </label>
                         <p class="de"><b>Spannung in Volt (12 V sind zumeist der richtige Wert):</b></p>
-                        <label class="de" for="spannung">
-                            <input id="spannung" name="spannung" type="text">
-                        </label>
-                        <p class="de">Dein Kabelquerschnitt für diesen Verbraucher sollte
-                            <span class="berechnet" data-ref="ausgabe" data-fallback>0,00</span>
-                            mm haben
-                        </p>
+                        <label class="de" for="spannung-de">
+                            <input id="spannung-de" name="spannung" type="text">
+                        </label> -->
+                        <fieldset>
+                            <label class="de" for="kabellaenge-de">Länge des Kabels - nur eine Strecke in Meter (m):</label>
+                            <br>
+                            <input id="kabellaenge-de" name="kabellaenge" type="text">
+                            <br>
+                            <label class="de" for="maxstrom-de">Maximaler Strom in Ampere (A):</label>
+                            <br>
+                            <input id="maxstrom-de" name="maxstrom" type="text">
+                            <br>
+                            <label class="de" for="verlustfaktor-de">Verlustfaktor in Prozent (%):</label>
+                            <br>
+                            <input id="verlustfaktor-de" name="verlustfaktor" type="text">
+                            <br>
+
+                        </fieldset>
+                        <button type="submit" onclick="datenuebernahme()">Ausführen</button>
+
+
+                        <p class="de" id="berechnet-de"> </p>
+
+
                         <p class="en"><b>Length of the cable (only one distance in meters):</b></p>
-                        <label class="en" for="kabellaenge">
-                            <input id="kabellaenge" name="kabellaenge" type="text">
+                        <label class="en" for="kabellaenge-en">
+                            <input id="kabellaenge-en" name="kabellaenge" type="text">
                         </label>
                         <p class="en"><b>Maximum current in amps:</b></p>
-                        <label class="en" for="maxstrom">
-                            <input id="maxstrom" name="maxstrom" type="text">
+                        <label class="en" for="maxstrom-en">
+                            <input id="maxstrom-en" name="maxstrom" type="text">
                         </label>
                         <p class="en"><b>Loss factor in percent:</b></p>
-                        <label class="en" for="verlustfaktor">
-                            <input id="verlustfaktor" name="verlustfaktor" type="text">
+                        <label class="en" for="verlustfaktor-en">
+                            <input id="verlustfaktor-en" name="verlustfaktor" type="text">
                         </label>
                         <p class="en"><b>Voltage in volts (12 V is mostly the correct value):</b></p>
-                        <label class="en" for="spannung">
-                            <input id="spannung" name="spannung" type="text">
+                        <label class="en" for="spannung-en">
+                            <input id="spannung-en" name="spannung" type="text">
                         </label>
                         <p class="en">Your cable cross section for this consumer should be
-                            <span class="berechnet" data-ref="ausgabe" data-fallback>0,00</span>
+                            <span class="berechnet-en" data-ref="ausgabe" data-fallback>0,00</span>
                             mm
                         </p>
                     </div>
@@ -453,7 +470,8 @@
                         <img src="images/fenster.jpg" alt="Der Ausschnitt in der Seitentür für ein Fenster">
                         <p class="de"><b>Fenstereinbau</b>
                             <br>
-                            Mit Crepeband kannst du vor dem Sägen die Schnittstelle abkleben, um Risse im Lack zu vermeiden.
+                            Mit Crepeband kannst du vor dem Sägen die Schnittstelle abkleben, um Risse im Lack zu
+                            vermeiden.
                         </p>
                         <p class="en"><b>Window installation</b>
                             <br>
@@ -781,4 +799,5 @@
     </footer>
     <script src="main.js"></script>
 </body>
+
 </html>
