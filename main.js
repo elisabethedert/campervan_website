@@ -77,3 +77,4 @@ const observer = new IntersectionObserver((entries)=>{
 
 const boxenEinfaden = document.querySelectorAll(".ueberschrift, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
 boxenEinfaden.forEach((element) => observer.observe(element));
+
