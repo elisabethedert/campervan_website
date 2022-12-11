@@ -319,44 +319,23 @@
                         <li class="en">A maximum of 1% is recommended for solar systems</li>
                     </div>
                     <div class="eingabe">
-                        <!-- <p class="de"><b>Länge des Kabels (nur eine Strecke in Meter):</b></p>
-                        <label class="de" for="kabellaenge-de">
-                            <input id="kabellaenge-de" name="kabellaenge" type="text">
-                        </label>
-                        <p class="de"><b>Maximaler Strom in Ampere:</b></p>
-                        <label class="de" for="maxstrom-de">
-                            <input id="maxstrom-de" name="maxstrom" type="text">
-                        </label>
-                        <p class="de"><b>Verlustfaktor in Prozent:</b></p>
-                        <label class="de" for="verlustfaktor-de">
-                            <input id="verlustfaktor-de" name="verlustfaktor" type="text">
-                        </label>
-                        <p class="de"><b>Spannung in Volt (12 V sind zumeist der richtige Wert):</b></p>
-                        <label class="de" for="spannung-de">
-                            <input id="spannung-de" name="spannung" type="text">
-                        </label> -->
-                        <fieldset>
-                            <label class="de" for="kabellaenge-de">Länge des Kabels - nur eine Strecke in Meter (m):</label>
+                        <fieldset class="de">
+                            <label for="kabellaenge-de"><b> Länge des Kabels - nur eine Strecke in Meter (m):</b></label>
                             <br>
                             <input id="kabellaenge-de" name="kabellaenge" type="text">
                             <br>
-                            <label class="de" for="maxstrom-de">Maximaler Strom in Ampere (A):</label>
+                            <label for="maxstrom-de"><b>Maximaler Strom in Ampere (A):</b></label>
                             <br>
                             <input id="maxstrom-de" name="maxstrom" type="text">
                             <br>
-                            <label class="de" for="verlustfaktor-de">Verlustfaktor in Prozent (%):</label>
+                            <label for="verlustfaktor-de"><b>Verlustfaktor in Prozent (%):</b></label>
                             <br>
                             <input id="verlustfaktor-de" name="verlustfaktor" type="text">
                             <br>
-
                         </fieldset>
-                        <button type="submit" onclick="datenuebernahme()">Ausführen</button>
+                        <button type="submit" onclick="datenuebernahme()">Berechnen</button>
 
-
-                        <p class="de" id="berechnet-de"> </p>
-
-
-                        <p class="en"><b>Length of the cable (only one distance in meters):</b></p>
+                        <!-- <p class="en"><b>Length of the cable (only one distance in meters):</b></p>
                         <label class="en" for="kabellaenge-en">
                             <input id="kabellaenge-en" name="kabellaenge" type="text">
                         </label>
@@ -375,7 +354,7 @@
                         <p class="en">Your cable cross section for this consumer should be
                             <span class="berechnet-en" data-ref="ausgabe" data-fallback>0,00</span>
                             mm
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </section>

@@ -89,7 +89,7 @@ function datenuebernahme() {
   var kabellaengeEn = document.getElementById("kabellaenge-en").value * 2;
   var verlustfaktorEn = document.getElementById("verlustfaktor-en").value / 100;
 
-  let rueckgabe = '';
+  let rueckgabe = "";
 
   var querschnittDe = (stromstaerkeDe * widerstandKupferOhm * kabellaengeDe) / (verlustfaktorDe * 12);
 
