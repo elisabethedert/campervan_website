@@ -21,7 +21,9 @@ body {
 
 /* Header und Footer Design
     - schlicht und umrahmend des inhaltsreichen Main-Abschnitts
-    - der Header soll fix bleiben, um jederzeit die darin enthaltenen Funktionen nutzen zu können
+    - im Header befindet sich der Titel der Seite, sowie ein Balken 
+      der fix bleibt und den Hintergrund für die Auwahlobjekte bildet
+    - im Footer steht der Name des Autors der Seite (Elisabeth Edert)
 */
 
 #top-bar {
@@ -95,7 +97,10 @@ h3 {
 .c3 h3,
 .c4 p,
 .c4 h2,
-.c4 h3 {
+.c4 h3,
+.c5 p,
+.c5 h2,
+.c5 h3 {
     /* margin unset reduziert ungewollte Lücken*/
     margin: unset;
 }
@@ -118,8 +123,12 @@ h3 {
 section {
     height: fit-content;
     margin-top: 0%;
+}
+.c1, .c2, .c3, .c4 {
     padding: 50px 10% 50px 10%;
-
+}
+.c5 {
+    padding: 0px 10% 50px 10%;
 }
 
 .c1,
@@ -147,8 +156,24 @@ hr {
     visibility: hidden;
     height: 0px !important;
     position: absolute;
-    margin: -90px;
+    margin: -70px;
 }
+
+/* Zusätzliche Styles für das Impressum */
+.c5 p {
+    margin-bottom: 60px;
+}
+
+.c5 h2,
+.c5 h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.impr-text {
+
+}
+
 
 /* Navigations-Styles
     -schlicht und übersichtlich
@@ -322,7 +347,6 @@ input#menu {
 .flex-text-img-top {
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
     padding: 50px 10% 2% 15%;
 }
 
@@ -471,20 +495,10 @@ fieldset {
     font-size: 1.0em;
 }
 
-/* Zusätzliche Styles für das Impressum */
-.c5 p {
-    margin-bottom: 60px;
-}
-
-.c5 h2,
-.c5 h3 {
-    margin-top: 0px;
-}
-
-
 /* Einfaden der Elemente 
 Inspiration: https://youtu.be/T33NN_pPeNI*/
 .ueberschrift,
+.impr-text,
 .bild,
 .text,
 .boxen,
@@ -494,14 +508,12 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
 .zitat {
     opacity: 0;
     filter: blur(5px);
-    /* transform: translateX(100%);              !!!! Wenn das drin ist gibts einen Schiebebalken*/
     transition: all 0.8s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
 }
 
 
@@ -583,6 +595,7 @@ Responsive Design
     }
 
     .ueberschrift,
+    .impr-text,
     .bild,
     .text,
     .boxen,

@@ -48,7 +48,7 @@ function trans(sprache) {
     }
   }
 
-  for (let i = 0; i < spracheEn.length; i++) {
+  for (let i = 0; i < spracheDe.length; i++) {
     if (sprache === 'en') {
       console.log("DE gegklickt");
       spracheDe[i].style.display = "none";
@@ -75,54 +75,77 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const boxenEinfaden = document.querySelectorAll(".ueberschrift, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
+const boxenEinfaden = document.querySelectorAll(".ueberschrift, .impr-text, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
 boxenEinfaden.forEach((element) => observer.observe(element));
 
-function datenuebernahme() {
+function datenuebernahme(sprache) {
+  console.log("script datenübernahme");
   var widerstandKupferOhm = 0.0175;
+  var rueckgabe = "";
 
-  var stromstaerkeDe = document.getElementById("maxstrom-de").value;
-  var kabellaengeDe = document.getElementById("kabellaenge-de").value * 2;
-  var verlustfaktorDe = document.getElementById("verlustfaktor-de").value / 100;
+  if (sprache === 'de') {
+    var stromstaerke = document.getElementById("maxstrom-de").value;
+    var kabellaenge = document.getElementById("kabellaenge-de").value * 2;
+    var verlustfaktor = document.getElementById("verlustfaktor-de").value / 100;
+  } else if (sprache === 'en') {
+    var stromstaerke = document.getElementById("maxstrom-en").value;
+    var kabellaenge = document.getElementById("kabellaenge-en").value * 2;
+    var verlustfaktor = document.getElementById("verlustfaktor-en").value / 100;
+  }
+  var querschnitt = (stromstaerke * widerstandKupferOhm * kabellaenge) / (verlustfaktor * 12);
+  console.log(querschnitt);
 
-  var stromstaerkeEn = document.getElementById("maxstrom-en").value;
-  var kabellaengeEn = document.getElementById("kabellaenge-en").value * 2;
-  var verlustfaktorEn = document.getElementById("verlustfaktor-en").value / 100;
-
-  let rueckgabe = "";
-
-  var querschnittDe = (stromstaerkeDe * widerstandKupferOhm * kabellaengeDe) / (verlustfaktorDe * 12);
-
-  console.log(querschnittDe);
-
-  if (querschnittDe < 0.7) {
+  if (querschnitt < 0.7) {
     rueckgabe = "0,75";
-  } else if (querschnittDe >= 0.7 && querschnittDe < 1.4) {
+  } else if (querschnitt >= 0.7 && querschnitt < 1.4) {
     rueckgabe = "1,5";
-  } else if (querschnittDe >= 1.4 && querschnittDe < 3.8) {
+  } else if (querschnitt >= 1.4 && querschnitt < 3.8) {
     rueckgabe = "4";
-  } else if (querschnittDe >= 3.8 && querschnittDe < 5) {
+  } else if (querschnitt >= 3.8 && querschnitt < 5) {
     rueckgabe = "6";
-  } else if (querschnittDe >= 5 && querschnittDe < 8) {
+  } else if (querschnitt >= 5 && querschnitt < 8) {
     rueckgabe = "10";
-  } else if (querschnittDe >= 8 && querschnittDe < 143) {
+  } else if (querschnitt >= 8 && querschnitt < 143) {
     rueckgabe = "16";
-  } else if (querschnittDe >= 14 && querschnittDe < 23) {
+  } else if (querschnitt >= 14 && querschnitt < 23) {
     rueckgabe = "25";
-  } else if (querschnittDe >= 23 && querschnittDe < 33) {
+  } else if (querschnitt >= 23 && querschnitt < 33) {
     rueckgabe = "35";
-  } else if (querschnittDe >= 33 && querschnittDe < 45) {
+  } else if (querschnitt >= 33 && querschnitt < 45) {
     rueckgabe = "50";
-  } else if (querschnittDe >= 45 && querschnittDe < 65) {
+  } else if (querschnitt >= 45 && querschnitt < 65) {
     rueckgabe = "70";
-  } else if (querschnittDe >= 65 && querschnittDe < 90) {
+  } else if (querschnitt >= 65 && querschnitt < 90) {
     rueckgabe = "95";
-  } else if (querschnittDe >= 90 && querschnittDe < 145) {
+  } else if (querschnitt >= 90 && querschnitt < 145) {
     rueckgabe = "150";
-  } else if (querschnittDe >= 145 && querschnittDe < 290) {
+  } else if (querschnitt >= 145 && querschnitt <= 290) {
     rueckgabe = "300";
+  } else if (querschnitt > 290) {
+    rueckgabe = "xxx";
   }
 
-  document.getElementById("berechnet-de").innerHTML = "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen";
-  console.log("datenuebernahme");
+  if (sprache === 'de') {
+    document.getElementById("berechnet-de").innerHTML = "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen.";
+    console.log("datenuebernahme-de");
+    if (querschnitt > 290) {
+      document.getElementById("berechnet-de").innerHTML = "Checke nochmal deine Eingaben, das " +
+        "Ergebnis ist zu groß für einen geeigneten Kabelquerschnitt.";
+
+
+    }
+  } else if (sprache === 'en') {
+    document.getElementById("berechnet-en").innerHTML = "Your cable cross section should be at least " + rueckgabe + " mm.";
+    console.log("datenuebernahme-en");
+    if (querschnitt > 290) {
+      document.getElementById("berechnet-en").innerHTML = "Check your inputs, the result is too large " +
+        "for a suitable cable cross section.";
+    }
+  }
+  console.log(rueckgabe);
+}
+
+function FensterOeffnen(Adresse) {
+  MeinFenster = window.open(Adresse, "Zweitfenster", "width=1000,height=1000,left=100,top=200");
+  MeinFenster.focus();
 }

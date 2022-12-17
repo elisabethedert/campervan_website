@@ -9,7 +9,6 @@
     <title>Impressum</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- Alle Übersetzungen mit https://www.deepl.com/translator -->
@@ -17,177 +16,213 @@
 <body>
 
     <!-- Im Header ist der obere Balken mit Navigation Sprachübersetzung, immer zu sehen -->
-    <header class="c1">
-        <div id="sprache">
-            <button onclick="trans(1)">EN</button>
-            <button onclick="trans(2)">DE</button>
-        </div>
-
-        <!-- Top Navigation Menu -->
-        <!-- Inspiration: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
-        <div class="mainnav">
-            <a href="index.html" class="sichtbar"><img src="images/logo.svg" alt="Camperlogo"></a>
-            <div id="ankertags">
-                <a class="de" href="index.html#planung">Planung</a>
-                <a class="de" href="index.html#besichtigung-kauf">Besichtigung<br> & Kauf</a>
-                <a class="de" href="index.html#ueberlegungen">Überlegungen<br>am Fahrzeug</a>
-                <a class="de" href="index.html#reinigung">Fahrzeug reinigen</a>
-                <a class="de" href="index.html#rechner">Kabel-Rechner</a>
-                <a class="de" href="index.html#arbeitsplatz-einrichten">Arbeitsplatz <br> einrichten</a>
-                <a class="de" href="index.html#erste-umbauten">Erste Umbauten</a>
-                <a class="de" href="index.html#heizung-licht">Heizung & Licht</a>
-                <a class="de" href="index.html#moebelbau">Möbelbau <br>& Verbraucher</a>
-                <a class="de" href="index.html#probewohnen">Probewohnen</a>
-                <a class="de" href="index.html#verkleidung">Verkleidung <br> & Dekoration</a>
-                <a class="de" href="index.html#tuev">TÜV-Abnahme</a>
-                <a class="de" href="index.html#ertse-reise">Erste Reise</a>
-                <a class="de" href="index.html#aber">Aber...</a>
-                <a class="de" href="impressum.html">Impressum</a>
-                <a class="en" href="index.html#planung">Planing</a>
-                <a class="en" href="index.html#besichtigung-kauf">Visiting<br>& purchase</a>
-                <a class="en" href="index.html#ueberlegungen">Considerations</a>
-                <a class="en" href="index.html#reinigung">Vehicle cleaning</a>
-                <a class="en" href="index.html#rechner">Cable cross<br>calculator</a>
-                <a class="en" href="index.html#arbeitsplatz-einrichten">Set up<br>workplace</a>
-                <a class="en" href="index.html#erste-umbauten">First conversions</a>
-                <a class="en" href="index.html#heizung-licht">Heating & Light</a>
-                <a class="en" href="index.html#moebelbau">Furniture making</a>
-                <a class="en" href="index.html#probewohnen">Try out</a>
-                <a class="en" href="index.html#verkleidung">Cladding<br>& decoration</a>
-                <a class="en" href="index.html#tuev">TÜV inspection</a>
-                <a class="en" href="index.html#ertse-reise">First<br>real journey</a>
-                <a class="en" href="index.html#aber">But...</a>
-                <a class="en" href="impressum.html">imprint</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="toggle()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </header>
-    <main>
-        <section class="c5">
-            <div id="impressum" class="h2-p-box">
-                <!-- Das im folgenden dargestellte Impressum stammt von meiner alten Portfolioseite, welche ich 2020
-                erstellt habe. Die Texte könnten daher inhaltlich veraltet sein -->
-                <h1 class="de">Impressum</h1>
-
-                <h2 class="de">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-                <p class="de">Elisabeth Edert<br />
-                    Mildestieg 2<br />
-                    22307 Hamburg</p>
-
-                <h2 class="de">Kontakt</h2>
-                <p class="de">Telefon: 01628897918<br />
-                    E-Mail: elisabeth.edert@gmail.com</p>
-
-                <h2 class="de">Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-                <p class="de">Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-                    Verbraucherschlichtungsstelle teilzunehmen.</p>
-
-                <h3 class="de">Haftung f&uuml;r Inhalte</h3>
-                <p class="de">Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte
-                    auf diesen
-                    Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als
-                    Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen
-                    zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit
-                    hinweisen.<br>
-                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
-                    Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem
-                    Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von
-                    entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
-
-                <h3 class="de">Haftung f&uuml;r Links</h3>
-                <p class="de">Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir
-                    keinen Einfluss
-                    haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
-                    &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder
-                    Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf
-                    m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum
-                    Zeitpunkt der Verlinkung nicht erkennbar.
-                    <br>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
-                    Anhaltspunkte
-                    einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
-                    Links umgehend entfernen.
-                </p>
-
-                <h3 class="de">Urheberrecht</h3>
-                <p class="de">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
-                    dem
-                    deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
-                    Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung
-                    des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den
-                    privaten, nicht kommerziellen Gebrauch gestattet.
-                    <br>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
-                    Urheberrechte
-                    Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-                    trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden
-                    Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-                </p>
-
-                <p class="de">Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
-
-                <!-- Übersetzung auf Englisch -->
-                <h1 class="en">Imprint</h1>
-
-                <h2 class="en">Information according to § 5 TMG</h2>
-                <p class="en">Elisabeth Edert<br />
-                    Mildestieg 2<br />
-                    22307 Hamburg</p>
-
-                <h2 class="en">Contact</h2>
-                <p class="en">phone: 01628897918<br />
-                    E-Mail: elisabeth.edert@gmail.com</p>
-
-                <h2 class="en">Consumer dispute resolution/universal arbitration board</h2>
-                <p>We are not willing or obligated to participate in dispute resolution proceedings before a
-                    consumer arbitration board.</p>
-
-                <h3 class="en">Liability for contents</h3>
-                <p class="en">As a service provider, we are responsible for our own content on these pages according to
-                    § 7 Abs.1 TMG
-                    general laws. According to §§ 8 to 10 TMG, however, we are not obligated as a service provider
-                    to monitor transmitted or stored information from third parties or to investigate circumstances
-                    or to investigate circumstances that indicate illegal activity. <br>
-                    Obligations to remove or block the use of information in accordance with general
-                    laws remain unaffected. However, any liability in this respect is only possible from the time of
-                    knowledge of a concrete violation of the law. If we become aware of corresponding infringements, we
-                    will
-                    infringements, we will remove this content immediately.</p>
-
-                <h3 class="en">Liability for links</h3>
-                <p class="en">Our offer contains links to external websites of third parties, on whose contents we have
-                    no influence.
-                    Therefore, we cannot assume any liability for these external contents. For the contents of the
-                    The respective provider or operator of the pages is always responsible for the content of the linked
-                    pages. The linked
-                    pages were checked for possible legal violations at the time of linking. Illegal contents
-                    were not recognizable at the time of linking. <br>
-                    However, a permanent control of the contents of the linked pages is not reasonable without concrete
-                    evidence of a violation of the law. If we become aware of any infringements, we will remove the
-                    links in question immediately.
-                    such links immediately.
-                </p>
-
-                <h3 class="en">Copyright</h3>
-                <p class="en">The contents and works created by the site operators on these pages are subject to German
-                    copyright law.
-                    copyright law. The reproduction, processing, distribution and any kind of exploitation outside the
-                    limits of copyright
-                    of the copyright require the written consent of the author or creator.
-                    Downloads and copies of this site are only permitted for private, non-commercial use. <br>
-                    Insofar as the content on this site was not created by the operator, the copyrights of third parties
-                    are respected.
-                    respected. In particular, third-party content is identified as such. Should you nevertheless become
-                    aware of a
-                    copyright infringement, please inform us accordingly. At
-                    We will remove such content immediately upon becoming aware of any infringements.
-                </p>
-
-                <p class="en">Source: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
-
+    <header>
+        <div id="top-bar" class="c1"></div>
+        <section class="c1">
+            <div class="flex-text-img-top">
+                <div class="ueberschrift">
+                    <h1 class="de">Impressum</h1>
+                    <h1 class="en">Imprint</h1>
+                </div>
             </div>
         </section>
-    </main>
+
+    </header>
+    <div id="content">
+        <aside id="left">
+            <!-- Top Navigations Menu -->
+            <div class="mainnav">
+                <div id="nav">
+                    <div class="sichtbar"><a href="index.html#"><img src="images/logo.svg" alt="Camperlogo"></a></div>
+                    <div class="menubars" onclick="toggle()">
+                        <input type="checkbox" id="menu">
+                        <label class="hamburg">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="ankertags">
+                    <a class="de" href="index.html#planung">Planung</a>
+                    <a class="de" href="index.html#besichtigung-kauf">Besichtigung<br> & Kauf</a>
+                    <a class="de" href="index.html#ueberlegungen">Überlegungen<br>am Fahrzeug</a>
+                    <a class="de" href="index.html#reinigung">Fahrzeug reinigen</a>
+                    <a class="de" href="index.html#rechner">Kabel-Rechner</a>
+                    <a class="de" href="index.html#arbeitsplatz-einrichten">Arbeitsplatz <br> einrichten</a>
+                    <a class="de" href="index.html#erste-umbauten">Erste Umbauten</a>
+                    <a class="de" href="index.html#heizung-licht">Heizung & Licht</a>
+                    <a class="de" href="index.html#moebelbau">Möbelbau <br>& Verbraucher</a>
+                    <a class="de" href="index.html#probewohnen">Probewohnen</a>
+                    <a class="de" href="index.html#verkleidung">Verkleidung <br> & Dekoration</a>
+                    <a class="de" href="index.html#tuev">TÜV-Abnahme</a>
+                    <a class="de" href="index.html#ertse-reise">Erste Reise</a>
+                    <a class="de" href="index.html#aber">Aber...</a>
+                    <a class="de" href="impressum.html">Impressum</a>
+                    <a class="en" href="index.html#planung">Planing</a>
+                    <a class="en" href="index.html#besichtigung-kauf">Visiting<br>& purchase</a>
+                    <a class="en" href="index.html#ueberlegungen">Considerations</a>
+                    <a class="en" href="index.html#reinigung">Vehicle cleaning</a>
+                    <a class="en" href="index.html#rechner">Cable cross<br>calculator</a>
+                    <a class="en" href="index.html#arbeitsplatz-einrichten">Set up<br>workplace</a>
+                    <a class="en" href="index.html#erste-umbauten">First conversions</a>
+                    <a class="en" href="index.html#heizung-licht">Heating & Light</a>
+                    <a class="en" href="index.html#moebelbau">Furniture making</a>
+                    <a class="en" href="index.html#probewohnen">Try out</a>
+                    <a class="en" href="index.html#verkleidung">Cladding<br>& decoration</a>
+                    <a class="en" href="index.html#tuev">TÜV inspection</a>
+                    <a class="en" href="index.html#ertse-reise">First<br>real journey</a>
+                    <a class="en" href="index.html#aber">But...</a>
+                    <a class="en" href="impressum.html">imprint</a>
+                </div>
+            </div>
+        </aside>
+        <main id="middle">
+            <section class="c5">
+                <div id="impressum" class="impr-text">
+                    <!-- Das im folgenden dargestellte Impressum stammt von meiner alten Portfolioseite, welche ich 2020
+                erstellt habe. Die Texte könnten daher inhaltlich veraltet sein -->
+
+                    <h2 class="de">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+                    <p class="de">Elisabeth Edert<br />
+                        Mildestieg 2<br />
+                        22307 Hamburg</p>
+
+                    <h2 class="de">Kontakt</h2>
+                    <p class="de">Telefon: 01628897918<br />
+                        E-Mail: elisabeth.edert@gmail.com</p>
+
+                    <h2 class="de">Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
+                    <p class="de">Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                        Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                    <h3 class="de">Haftung f&uuml;r Inhalte</h3>
+                    <p class="de">Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene
+                        Inhalte
+                        auf diesen
+                        Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als
+                        Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde
+                        Informationen
+                        zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige
+                        T&auml;tigkeit
+                        hinweisen.<br>
+                        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+                        Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem
+                        Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von
+                        entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+                    <h3 class="de">Haftung f&uuml;r Links</h3>
+                    <p class="de">Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir
+                        keinen Einfluss
+                        haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
+                        &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
+                        oder
+                        Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung
+                        auf
+                        m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum
+                        Zeitpunkt der Verlinkung nicht erkennbar.
+                        <br>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+                        Anhaltspunkte
+                        einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+                        derartige
+                        Links umgehend entfernen.
+                    </p>
+
+                    <h3 class="de">Urheberrecht</h3>
+                    <p class="de">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+                        unterliegen
+                        dem
+                        deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
+                        Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen
+                        Zustimmung
+                        des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den
+                        privaten, nicht kommerziellen Gebrauch gestattet.
+                        <br>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
+                        Urheberrechte
+                        Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                        trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden
+                        Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend
+                        entfernen.
+                    </p>
+
+                    <p class="de">Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+
+                    <!-- Übersetzung auf Englisch -->
+                    <h2 class="en">Information according to § 5 TMG</h2>
+                    <p class="en">Elisabeth Edert<br />
+                        Mildestieg 2<br />
+                        22307 Hamburg</p>
+
+                    <h2 class="en">Contact</h2>
+                    <p class="en">phone: 01628897918<br />
+                        E-Mail: elisabeth.edert@gmail.com</p>
+
+                    <h2 class="en">Consumer dispute resolution/universal arbitration board</h2>
+                    <p>We are not willing or obligated to participate in dispute resolution proceedings before a
+                        consumer arbitration board.</p>
+
+                    <h3 class="en">Liability for contents</h3>
+                    <p class="en">As a service provider, we are responsible for our own content on these pages according
+                        to
+                        § 7 Abs.1 TMG
+                        general laws. According to §§ 8 to 10 TMG, however, we are not obligated as a service provider
+                        to monitor transmitted or stored information from third parties or to investigate circumstances
+                        or to investigate circumstances that indicate illegal activity. <br>
+                        Obligations to remove or block the use of information in accordance with general
+                        laws remain unaffected. However, any liability in this respect is only possible from the time of
+                        knowledge of a concrete violation of the law. If we become aware of corresponding infringements,
+                        we
+                        will
+                        infringements, we will remove this content immediately.</p>
+
+                    <h3 class="en">Liability for links</h3>
+                    <p class="en">Our offer contains links to external websites of third parties, on whose contents we
+                        have
+                        no influence.
+                        Therefore, we cannot assume any liability for these external contents. For the contents of the
+                        The respective provider or operator of the pages is always responsible for the content of the
+                        linked
+                        pages. The linked
+                        pages were checked for possible legal violations at the time of linking. Illegal contents
+                        were not recognizable at the time of linking. <br>
+                        However, a permanent control of the contents of the linked pages is not reasonable without
+                        concrete
+                        evidence of a violation of the law. If we become aware of any infringements, we will remove the
+                        links in question immediately.
+                        such links immediately.
+                    </p>
+
+                    <h3 class="en">Copyright</h3>
+                    <p class="en">The contents and works created by the site operators on these pages are subject to
+                        German
+                        copyright law.
+                        copyright law. The reproduction, processing, distribution and any kind of exploitation outside
+                        the
+                        limits of copyright
+                        of the copyright require the written consent of the author or creator.
+                        Downloads and copies of this site are only permitted for private, non-commercial use. <br>
+                        Insofar as the content on this site was not created by the operator, the copyrights of third
+                        parties
+                        are respected.
+                        respected. In particular, third-party content is identified as such. Should you nevertheless
+                        become
+                        aware of a
+                        copyright infringement, please inform us accordingly. At
+                        We will remove such content immediately upon becoming aware of any infringements.
+                    </p>
+
+                    <p class="en">Source: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+
+                </div>
+            </section>
+        </main>
+        <aside id="right">
+            <div id="sprache">
+                <button id="button-en" onclick="trans('en')">EN</button>
+                <button id="button-de" onclick="trans('de')">DE</button>
+            </div>
+        </aside>
+    </div>
 
     <footer class="c1">
         <p>Elisabeth Edert 2022</p>

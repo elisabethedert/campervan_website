@@ -14,7 +14,6 @@
 <!-- Alle Übersetzungen mit https://www.deepl.com/translator -->
 
 <body>
-
     <!-- Im Header ist der obere Balken mit Navigation und Sprachübersetzung, immer zu sehen -->
     <header>
         <div id="top-bar" class="c1"></div>
@@ -30,7 +29,9 @@
                         about cable cross-section to the right material</p>
                 </div>
                 <div class="bild">
-                    <img src="images/header.png" alt="Headerbild mit Camper">
+                    <a href="images/header.png" onclick="FensterOeffnen(this.href); return false">
+                        <img src="images/header.png" />
+                      </a>
                 </div>
             </div>
         </section>
@@ -320,7 +321,8 @@
                     </div>
                     <div class="eingabe">
                         <fieldset class="de">
-                            <label for="kabellaenge-de"><b> Länge des Kabels - nur eine Strecke in Meter (m):</b></label>
+                            <label for="kabellaenge-de"><b> Länge des Kabels - nur eine Strecke in Meter
+                                    (m):</b></label>
                             <br>
                             <input id="kabellaenge-de" name="kabellaenge" type="text">
                             <br>
@@ -333,28 +335,24 @@
                             <input id="verlustfaktor-de" name="verlustfaktor" type="text">
                             <br>
                         </fieldset>
-                        <button type="submit" onclick="datenuebernahme()">Berechnen</button>
-
-                        <p class="en"><b>Length of the cable (only one distance in meters):</b></p>
-                        <label class="en" for="kabellaenge-en">
+                        <button class="de" type="submit" onclick="datenuebernahme('de')">Berechnen</button>
+                        <p class="de" id="berechnet-de"></p>
+                        <fieldset class="en">
+                            <label for="kabellaenge-en"><b> Length of the cable - only one distance in meters (m):</b></label>
+                            <br>
                             <input id="kabellaenge-en" name="kabellaenge" type="text">
-                        </label>
-                        <p class="en"><b>Maximum current in amps:</b></p>
-                        <label class="en" for="maxstrom-en">
+                            <br>
+                            <label for="maxstrom-en"><b>Maximum current in amps (A):</b></label>
+                            <br>
                             <input id="maxstrom-en" name="maxstrom" type="text">
-                        </label>
-                        <p class="en"><b>Loss factor in percent:</b></p>
-                        <label class="en" for="verlustfaktor-en">
+                            <br>
+                            <label for="verlustfaktor-en"><b>Loss factor in percent (%):</b></label>
+                            <br>
                             <input id="verlustfaktor-en" name="verlustfaktor" type="text">
-                        </label>
-                        <p class="en"><b>Voltage in volts (12 V is mostly the correct value):</b></p>
-                        <label class="en" for="spannung-en">
-                            <input id="spannung-en" name="spannung" type="text">
-                        </label>
-                        <p class="en">Your cable cross section for this consumer should be
-                            <span class="berechnet-en" data-ref="ausgabe" data-fallback>0,00</span>
-                            mm
-                        </p>
+                            <br>
+                        </fieldset>
+                        <button class="en" type="submit" onclick="datenuebernahme('en')">Calculate</button>
+                        <p class="en" id="berechnet-en"></p>
                     </div>
                 </div>
             </section>
@@ -550,7 +548,7 @@
                     </div>
                 </div>
             </section>
-            <!-- Section zum Schritt Möbelbau -->
+            <!-- Section zum Schritt Probewohnen -->
             <hr id="probewohnen">
             <section class="c3">
                 <div class="untereinander-bild-text">
@@ -571,7 +569,7 @@
                     </p>
                 </div>
             </section>
-            <!-- Section zum Schritt Möbelbau -->
+            <!-- Section zum Schritt Verkleidunung -->
             <hr id="verkleidung">
             <section class="c4">
                 <div class="h2-p-box">
