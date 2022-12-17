@@ -45,7 +45,7 @@ Unterteilung in Sections
     - Übersichtlichkeit im Code: Abschnitte werden deutlich
     - Zuweisung der Sections zu Klassen, die Hintergundfarben zuordnen
     - Sections enthalten divs die ebenfalls Klassen zugewiesen sind. Diese Klassen enthalten Styles und können wiederverwendet werden
-    - Eine individuelle Kombination von Hintergrundfarben und Inhalten sind damit möglich
+    - eine individuelle Kombination von Hintergrundfarben und Inhalten sind damit möglich
 
 Responsive Design
     - zwei @media max-width Größen, um einen saubereren Wechsel zwischen den verschiedenen Breiten zu bekommen
@@ -72,7 +72,7 @@ Rechner
 Allgemeine Hinweise:
    - Inspirationen aus dem Netz sind an den entsprechenden Stellen im Code vermerkt, die Inhalte sind auf meine Bedürnisse abgewandelt
    - console.log() sind noch enthalten, werden bis zur finalen Abgabe entfernt
-   - Feinheiten wie einhetliche Größe der Bildunterschirften-Kästen folgen noch
+   - Feinheiten wie einhetliche Größe der Bildunterschriften-Kästen folgen noch
 
 
 

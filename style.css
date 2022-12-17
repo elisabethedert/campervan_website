@@ -430,7 +430,7 @@ input#menu {
 .eingabe input {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px 0px 20px 0px;
     display: inline-block;
     border: none;
     border-radius: 4px;
@@ -439,7 +439,7 @@ input#menu {
 }
 
 input:invalid {
-    background: red;
+    background: rgb(255, 104, 104);
 }
 
 fieldset {

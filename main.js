@@ -13,7 +13,7 @@ function toggle() {
 }
 
 var mediaqu = window.matchMedia("(max-width: 1200px)") // Breite bei der umgesprungen werden soll
-responsive(mediaqu) 
+responsive(mediaqu)
 mediaqu.addListener(responsive) // addListener hinzufügen
 
 function responsive(mediaqu) {
@@ -81,13 +81,14 @@ function datenuebernahme(sprache) {
 
   if (sprache === 'de') {
     var stromstaerke = document.getElementById("maxstrom-de").value;
-    var kabellaenge = document.getElementById("kabellaenge-de").value * 2;
+    var kabellaenge = document.getElementById("maxstrom-de").value * 2;
     var verlustfaktor = document.getElementById("verlustfaktor-de").value / 100;
   } else if (sprache === 'en') {
     var stromstaerke = document.getElementById("maxstrom-en").value;
     var kabellaenge = document.getElementById("kabellaenge-en").value * 2;
     var verlustfaktor = document.getElementById("verlustfaktor-en").value / 100;
   }
+  
   var querschnitt = (stromstaerke * widerstandKupferOhm * kabellaenge) / (verlustfaktor * 12);
   console.log(querschnitt);
 
