@@ -1,4 +1,4 @@
-// Funktion für das Ausklappen der Menüleiste
+// Funktionen für das Ausklappen der Menüleiste
 var navig = document.getElementById("ankertags");
 
 function toggle() {
@@ -10,26 +10,21 @@ function toggle() {
     console.log("hier")
     navig.style.display = "none";
   }
-
 }
 
-var x = window.matchMedia("(max-width: 1200px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+var mediaqu = window.matchMedia("(max-width: 1200px)") // Breite bei der umgesprungen werden soll
+responsive(mediaqu) 
+mediaqu.addListener(responsive) // addListener hinzufügen
 
-function myFunction(x) {
-  if (x.matches) { // If media query matches
+function responsive(mediaqu) {
+  if (mediaqu.matches) { // Wenn die Mediaqueries mit der Seitenbreite übereinstimmen
     navig.style.display = "none";
   } else {
     navig.style.display = "block";
   }
 }
 
-
 // Funktion für die Übersetzung
-// Seite wird als erstes auf Deutsch geladen, kann per Buttonklick auf Englisch übersetzt werden
-// ist man im englsichen Modus und man wechselt die html-Seiten, so wird die neu geöffnete Seite auch inital
-// auf deutsch angezeigt. TODO: Sprache Seitenübergreifend ändern
 function trans(sprache) {
   var spracheEn = document.getElementsByClassName("en");
   var spracheDe = document.getElementsByClassName("de");
@@ -60,7 +55,7 @@ function trans(sprache) {
   }
 }
 
-// Einfaden der Elemente 
+// Einfaden der Elemente, wenn sie auf dem Bildschirm angezeigt werden
 // Inspiration: https://youtu.be/T33NN_pPeNI
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -78,6 +73,7 @@ const observer = new IntersectionObserver((entries) => {
 const boxenEinfaden = document.querySelectorAll(".ueberschrift, .impr-text, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
 boxenEinfaden.forEach((element) => observer.observe(element));
 
+// Berechnung des Kabelquerschnitts
 function datenuebernahme(sprache) {
   console.log("script datenübernahme");
   var widerstandKupferOhm = 0.0175;
@@ -131,8 +127,6 @@ function datenuebernahme(sprache) {
     if (querschnitt > 290) {
       document.getElementById("berechnet-de").innerHTML = "Checke nochmal deine Eingaben, das " +
         "Ergebnis ist zu groß für einen geeigneten Kabelquerschnitt.";
-
-
     }
   } else if (sprache === 'en') {
     document.getElementById("berechnet-en").innerHTML = "Your cable cross section should be at least " + rueckgabe + " mm.";
@@ -143,9 +137,4 @@ function datenuebernahme(sprache) {
     }
   }
   console.log(rueckgabe);
-}
-
-function FensterOeffnen(Adresse) {
-  MeinFenster = window.open(Adresse, "Zweitfenster", "width=1000,height=1000,left=100,top=200");
-  MeinFenster.focus();
 }

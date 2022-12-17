@@ -14,7 +14,6 @@
 <!-- Alle Übersetzungen mit https://www.deepl.com/translator -->
 
 <body>
-    <!-- Im Header ist der obere Balken mit Navigation und Sprachübersetzung, immer zu sehen -->
     <header>
         <div id="top-bar" class="c1"></div>
         <!-- Titelbild und Überschrift -->
@@ -29,16 +28,15 @@
                         about cable cross-section to the right material</p>
                 </div>
                 <div class="bild">
-                    <a href="images/header.png" onclick="FensterOeffnen(this.href); return false">
-                        <img src="images/header.png" />
-                      </a>
+                    <img src="images/header.png" alt="Titelbild mit Camper" />
                 </div>
             </div>
         </section>
     </header>
+    <!-- In der div mit der id content ist der gesamet Webseiten-Inhalt außer den Header und den Footer enthalten -->
     <div id="content">
+        <!-- Links befindet sich das Navigations Menu -->
         <aside id="left">
-            <!-- Top Navigations Menu -->
             <div class="mainnav">
                 <div id="nav">
                     <div class="sichtbar"><a href="#"><img src="images/logo.svg" alt="Camperlogo"></a></div>
@@ -85,10 +83,8 @@
                 </div>
             </div>
         </aside>
-
         <!-- In dem Main-Abschnitt sind alle Sections mit Inhalten -->
         <main id="middle">
-
             <!-- Section zum Schritt Planung -->
             <hr id="planung">
             <section class="c3">
@@ -324,21 +320,22 @@
                             <label for="kabellaenge-de"><b> Länge des Kabels - nur eine Strecke in Meter
                                     (m):</b></label>
                             <br>
-                            <input id="kabellaenge-de" name="kabellaenge" type="text">
+                            <input id="kabellaenge-de" name="kabellaenge" type="text" pattern="[0-9]+">
                             <br>
                             <label for="maxstrom-de"><b>Maximaler Strom in Ampere (A):</b></label>
                             <br>
-                            <input id="maxstrom-de" name="maxstrom" type="text">
+                            <input id="maxstrom-de" name="maxstrom" type="text" pattern="[0-9]+">
                             <br>
                             <label for="verlustfaktor-de"><b>Verlustfaktor in Prozent (%):</b></label>
                             <br>
-                            <input id="verlustfaktor-de" name="verlustfaktor" type="text">
+                            <input id="verlustfaktor-de" name="verlustfaktor" type="text" pattern="[0-9]+">
                             <br>
                         </fieldset>
                         <button class="de" type="submit" onclick="datenuebernahme('de')">Berechnen</button>
                         <p class="de" id="berechnet-de"></p>
                         <fieldset class="en">
-                            <label for="kabellaenge-en"><b> Length of the cable - only one distance in meters (m):</b></label>
+                            <label for="kabellaenge-en"><b> Length of the cable - only one distance in meters
+                                    (m):</b></label>
                             <br>
                             <input id="kabellaenge-en" name="kabellaenge" type="text">
                             <br>
@@ -362,7 +359,7 @@
                 <div class="flex-img-text">
                     <div class="text">
                         <h2 class="de">Arbeitsplatz einrichten</h2>
-                        <p class="de">Bevor es dann nun endlich zur Sache geht brauhcst du einen
+                        <p class="de">Bevor es dann nun endlich zur Sache geht brauchst du einen
                             geeigneten Arbeitsplatz. Was dabei auf keinen Fall fehlen
                             darf ist ein Tisch. Ob du die Isolierung zuschneiden, Holzplatten
                             für den Möbelbau zusägen oder deinen Kaffee abstellen möchtest,
@@ -764,6 +761,7 @@
 
             </section>
         </main>
+        <!-- Rechts befindet sich das fixierte Sprachmenü -->
         <aside id="right">
             <div id="sprache">
                 <button id="button-en" onclick="trans('en')">EN</button>

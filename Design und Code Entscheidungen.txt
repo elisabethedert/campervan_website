@@ -1,0 +1,87 @@
+Beschreibungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert (348500)
+
+Design:
+Farben
+    - um etwas Lebendigkeit beim Scrollen in das Layout zu bringen und die Sections mit einzelnen Themen voneinander abzugrenzen wurden verschiedene
+      Hintergrundfarben eingesetzt:
+        helles Grau
+        - angenehmer für das Auge als ein reines Weiß,
+        - diese Farbe wird auch für den Hintergrund der Texte verwendet, damit dort der Kontrast hoch ist und das Lesen angenehm ist
+        - Sections in der Farbe geben Ruhe in das Layout, da sich durch die vielen Bilder und weiteren Hintergrundfarben sehr viel Unruhe im Layout befindet
+        Grün-Töne
+        - eine lebendige und naütüliche Farbe, passt zum Thema Camping
+        - Grün ist die Komplementärfarbe von rot (dem Camper auf den Fotos)
+        dunkleres Grau
+        - als dunklere Farbe im Hintergrund eingesetzt
+
+Font
+    - eine Standardfont (Gill Sans) für das gesamte Dokument verwendet, überall verfügbar, websicher, schlichter & leist lesbarer Stil
+    - Schriftgrößen: 
+	- einheitlich aufgeteilt in Überschrften und Fließtext
+	- Titel groß und prägnant
+	- Kapitelüberschriften (H2) einheitlich
+	- Bildunterschriften sind Fließtext und kann einen fetten Titel haben, der das Bild in max. 2 Wörtern beschreibt
+    - die Farbe #4D4D4D ist ein dunkles grau und harmoniert besser als ein reines Schwarz mit den restlichen Farben
+		
+Bilder
+    - groß aber nicht zu viel Raum einnehmend
+    - standardisierte Größe von 1000x1000px (außer bei Bildern die nicht neben Text stehen), bewusst größer als auf der Webseite angezeigt
+      falls sie "im neuen Tab" geöffnet werden sollen, sind sie nicht verpixelt und können größer betrachtet werden, da die Bilder auch zur Anschauung dienen
+
+Navigations-Styles
+    - schlicht und übersichtlich, um schnell zu finden wonach gesucht ist
+    - das Auto-Icon, mit dem man wieder zurück zur Startseite gelangt, ist immer sichtbar, 
+      das ist schon gelerntes Wissen von Webseitennutzern und wird hier vorausgesetzt
+    - sollte das Fenster in der Höhe zu schmal werden, dann erhält das Menü einen Scrollbalken, der alle Menüpunkte weiterhin ereichen lässt
+
+Blurr Effekt beim Scrollen
+    - lässt die Seite dynamisch und interssanter wirken
+    - ist für die schmalste mobile Ansicht ausgestellt, da dies zu viel Unruhe erzeugen würde
+    - ist so eingestellt, dass ein Element den Effekt nur einmal durchläuft, sonst führt es auch zur Unruhe auf der Webseite
+
+
+Code:
+Unterteilung in Sections
+    - Übersichtlichkeit im Code: Abschnitte werden deutlich
+    - Zuweisung der Sections zu Klassen, die Hintergundfarben zuordnen
+    - Sections enthalten divs die ebenfalls Klassen zugewiesen sind. Diese Klassen enthalten Styles und können wiederverwendet werden
+    - Eine individuelle Kombination von Hintergrundfarben und Inhalten sind damit möglich
+
+Responsive Design
+    - zwei @media max-width Größen, um einen saubereren Wechsel zwischen den verschiedenen Breiten zu bekommen
+    - das seitliche Menü wechselt zum Ausklappmenü ab einer Breite von 1200px
+
+Sprachübersetzung
+   - Seite wird als erstes auf Deutsch geladen, kann per Buttonklick auf Englisch übersetzt werden
+   - Umsetzung mithilfe der Klassen "de" und "en" und nicht per Id's, da diese Seite lange Textabschnitte besitzt, 
+     welche ein Array sehr unübersichtlich machen würden      
+   - Texte auf beiden Sprachen in der html-Datei einzubinden und entsprechend einzublenden lässt die Wartung der Texte leichter gestalten
+     und die Function im js-Script übersichtlicher formulieren, auch wenn sich die html-Datei dadurch aufbläht
+   - durch das Arbeiten mit Klassen kann mit Collections gearbeitet werden, welche mit dem Befehl "getElementsByClassName" erzeugt werden, 
+     durch die Collction wird iteriert und der Inhalt (die entsprechende Sprache) kann entsprechend ein oder ausgeblendet werden
+
+Rechner
+   - in der html-Datei werden Ausgaben mithife von Patterns gefiltert
+   - in der js-Funktion werden Variablen in Abhängigkeit von der Sprache erzeugt, welche die eingegebenen Werte enthalten
+   - der notewendige Querschnitt des Kabels wird berechnet
+   - mithilfe der langen if else Abfrage wird auf standardisierte Kabelquerschnitte gerundet, die im Baumarkt zu finden sind, 
+     ein Puffer ist enthalten, um dem Kunden einen sicheren Wert geben zu können
+   - ist der berechnete Kabelquerschnitt größer als 300mm wird ein Satz ausgegeben, der darauf hinweist
+   - Tooltipps wurden bewusst weggelassen, da die Beschreibung des Feldes ausreichend ist und sich im Tooltipp nur doppeln würde
+
+Allgemeine Hinweise:
+   - Inspirationen aus dem Netz sind an den entsprechenden Stellen im Code vermerkt, die Inhalte sind auf meine Bedürnisse abgewandelt
+   - console.log() sind noch enthalten, werden bis zur finalen Abgabe entfernt
+   - Feinheiten wie einhetliche Größe der Bildunterschirften-Kästen folgen noch
+
+
+
+
+
+
+
+
+
+
+
+

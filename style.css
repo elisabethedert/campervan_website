@@ -1,7 +1,3 @@
-/* In dem gesamten Dokument wird die gleiche Schriftart verwendet:
-    - die Gill Sans ist eine Webfont und daher mit Internetzugang für alle Nutzer verwendbar
-    - die Farbe #4D4D4D ist ein dunkles grau und harmoniert besser als ein reines Schwarz mit den restlichen Farben
-*/
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #4D4D4D;
@@ -105,21 +101,7 @@ h3 {
     margin: unset;
 }
 
-/* Section-Styles
-    - um etwas Lebendigkeit beim Scrollen in das Layout zu bringen und
-    die Sections mit einzelnen Themen voneinander abzugrenzen wurden verschiedene Hintergrundfarben eingesetzt
-
-    ein helles Grau
-    - angenehmer für das Auge als ein reines Weiß,
-    - diese Farbe wird auch für den Hintergrund der Texte verwendet, damit dort der Kontrast hoch ist und das Lesen angenehm ist
-    - Sections in der Farbe geben Ruhe in das Layout, da sich durch die vielen Bilder und weiteren Hintergrundfarben sehr viel Unruhe im Layout befindet
-    Grün-Töne
-    - eine lebendige und naütüliche Farbe, passt zum Thema Camping
-    - Grün ist die Komplementärfarbe von rot (dem Camper auf den Fotos)
-    dunkleres Grau
-    - für Buttons
-    - als dunklere Farbe auch im Hintergrund eingesetzt
-*/
+/* Section-Styles*/
 section {
     height: fit-content;
     margin-top: 0%;
@@ -148,17 +130,6 @@ section {
     background-color: #B9BCB4;
 }
 
-/* hr dient als Anker für die Sprungmarken, besitzt aber kein Design*/
-hr {
-    border: none;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    visibility: hidden;
-    height: 0px !important;
-    position: absolute;
-    margin: -70px;
-}
-
 /* Zusätzliche Styles für das Impressum */
 .c5 p {
     margin-bottom: 60px;
@@ -170,14 +141,18 @@ hr {
     margin-bottom: 10px;
 }
 
-.impr-text {
-
+/* hr dient als Anker für die Sprungmarken, besitzt aber kein Design*/
+hr {
+    border: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    visibility: hidden;
+    height: 0px !important;
+    position: absolute;
+    margin: -70px;
 }
 
-
-/* Navigations-Styles
-    -schlicht und übersichtlich
-*/
+/* Navigations-Styles*/
 #sprache {
     position: fixed;
     left: 92%;
@@ -292,30 +267,12 @@ button:hover {
     top: 36px;
 }
 
-/* Bewegung der drei Spans, bwz Ausblenden des mittleren S */
-#menu:checked+.hamburg .line:nth-child(1) {
-    transform: translateY(12px) rotate(-45deg);
-}
-
-#menu:checked+.hamburg .line:nth-child(2) {
-    opacity: 0;
-}
-
-#menu:checked+.hamburg .line:nth-child(3) {
-    transform: translateY(-12px) rotate(45deg);
-}
-
-
 input#menu {
     display: none
 }
 
-/* test navi ende */
-
 .sichtbar {
-    /* Der sichtbare Teil des Menüs ist das Logo, über welches man von überall zurück zur Startseite gelangt.
-    Das ist schon gelerntes Wissen von Webseitennutzern und wird hier vorausgesetzt eingesetzt
-    */
+    /* Der sichtbare Teil des Menüs ist das Logo, über welches man von überall zurück zur Startseite gelangt. */
     margin-top: 10px;
 }
 
@@ -454,7 +411,6 @@ input#menu {
 .zitat h3,
 .zitat p {
     background: #F5F5F5;
-
 }
 
 .zitat h3 {
@@ -471,8 +427,7 @@ input#menu {
     margin-top: 20px;
 }
 
-.eingabe input[type=text],
-select {
+.eingabe input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -481,6 +436,10 @@ select {
     border-radius: 4px;
     box-sizing: border-box;
     background: #F5F5F5;
+}
+
+input:invalid {
+    background: red;
 }
 
 fieldset {
@@ -493,6 +452,10 @@ fieldset {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.0em;
+}
+
+#berechnet-en, #berechnet-de {
+    margin-top: 10px;
 }
 
 /* Einfaden der Elemente 
@@ -516,15 +479,15 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
     filter: blur(0);
 }
 
-
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Responsive Design
+   Responsive Design
+   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 */
 
 /* Erster Unbruch bei 1200px*/
 @media only screen and (max-width: 1200px) {
 
-    /* Überschriften und Bilder werden dadurch nicht abgeschnitten */
+    /* Überschriften und Bilder werden mit dieser Breite nicht abgeschnitten */
 
     #sprache {
         left: 80%;
@@ -567,13 +530,16 @@ Responsive Design
         display: none;
     }
 
+    .mainnav a:hover {
+        font-weight: 500;
+    }
+
     .menubars {
         display: block;
     }
 }
 
 /* Zweiter Unbruch bei 600px*/
-
 @media only screen and (max-width: 600px) {
 
     #sprache {
