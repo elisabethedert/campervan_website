@@ -22,13 +22,13 @@ body {
     - im Footer steht der Name des Autors der Seite (Elisabeth Edert)
 */
 
-#top-bar {
-    position: fixed;
-    height: 50px;
+header {
     width: 100%;
-    padding: 0% 15% 20px 0%;
-    margin-top: 0px;
     z-index: 1;
+}
+
+#top-bar {
+    padding: 10px;
 }
 
 #content {
@@ -67,8 +67,10 @@ footer p {
     - um ein einheitliches Design zu schaffen sind die jeweiligen Schriftgrößen fest definiert und werden an anderen Stellen nicht verändert
 */
 h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     line-height: .9em;
+    text-align: center;
+    margin: 10px;
 }
 
 h2 {
@@ -106,9 +108,14 @@ section {
     height: fit-content;
     margin-top: 0%;
 }
-.c1, .c2, .c3, .c4 {
+
+.c1,
+.c2,
+.c3,
+.c4 {
     padding: 50px 10% 50px 10%;
 }
+
 .c5 {
     padding: 0px 10% 50px 10%;
 }
@@ -154,11 +161,9 @@ hr {
 
 /* Navigations-Styles*/
 #sprache {
-    position: fixed;
-    left: 92%;
+    position: sticky;
+    top: 0;
     background: #F5F5F5;
-    width: 100%;
-    top: 10px;
 }
 
 #button-en {
@@ -176,6 +181,7 @@ button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: none;
     margin-top: 25px;
+    margin-left: 8px;
     padding: 10px;
 }
 
@@ -204,11 +210,9 @@ button:hover {
     padding: 0%;
 }
 
+/* Navigation links */
 .mainnav {
     overflow: hidden;
-    position: fixed;
-    height: 100%;
-    top: 10px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -219,7 +223,6 @@ button:hover {
     background: #F5F5F5;
 }
 
-/* Navigation links */
 #nav {
     display: flex;
     flex-direction: row;
@@ -240,7 +243,6 @@ button:hover {
     margin-right: auto;
     border-radius: 4px;
     cursor: grab;
-
 }
 
 .line {
@@ -300,19 +302,7 @@ input#menu {
     font-weight: 700;
 }
 
-/* Erste Section mit Titel und Bild */
-.flex-text-img-top {
-    display: flex;
-    flex-direction: row;
-    padding: 50px 10% 2% 15%;
-}
-
-.ueberschrift {
-    margin-right: 2%;
-    margin-bottom: 1em;
-    width: 50%;
-}
-
+/* Styles für einzelnde Bilder */
 .bild {
     width: 50%;
 }
@@ -374,7 +364,6 @@ input#menu {
     width: 50%;
     padding: 15px;
     background: #F5F5F5;
-
 }
 
 .text h2 {
@@ -444,7 +433,7 @@ input:invalid {
 
 fieldset {
     border: none;
-   padding: 0;
+    padding: 0;
 }
 
 .eingabe button {
@@ -454,7 +443,8 @@ fieldset {
     font-size: 1.0em;
 }
 
-#berechnet-en, #berechnet-de {
+#berechnet-en,
+#berechnet-de {
     margin-top: 10px;
 }
 
@@ -491,10 +481,6 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
 
     #sprache {
         left: 80%;
-    }
-
-    .ueberschrift {
-        width: 100%;
     }
 
     .flex-text-img-top {
@@ -560,7 +546,6 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         padding: 5%;
     }
 
-    .ueberschrift,
     .impr-text,
     .bild,
     .text,
@@ -575,8 +560,8 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         transform: translateX(0);
     }
 
-    .ueberschrift h1 {
-        font-size: 3em;
+    h1 {
+        font-size: 2em;
     }
 
 }

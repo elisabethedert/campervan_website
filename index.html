@@ -12,25 +12,14 @@
 </head>
 
 <!-- Alle Übersetzungen mit https://www.deepl.com/translator -->
+
 <body>
     <header>
-        <div id="top-bar" class="c1"></div>
-        <!-- Titelbild und Überschrift -->
-        <section class="c1">
-            <div class="flex-text-img-top">
-                <div class="ueberschrift">
-                    <h1 class="de">Von der Idee <br> zum Campervan</h1>
-                    <h1 class="en">From the idea <br> to a campervan</h1>
-                    <p class="de">Was Du bei der Planung beachten musst -
-                        über den Kabelquerschnitt zum richtigen Material</p>
-                    <p class="en">What you need to consider during planning -
-                        about cable cross-section to the right material</p>
-                </div>
-                <div class="bild">
-                    <img src="images/header.png" alt="Titelbild mit Camper" />
-                </div>
-            </div>
-        </section>
+        <!--Überschrift -->
+        <div id="top-bar" class="c3">
+            <h1 class="de">Von der Idee zum Campervan</h1>
+            <h1 class="en">From the idea <br> to a campervan</h1>
+        </div>
     </header>
     <!-- In der div mit der id content ist der gesamet Webseiten-Inhalt außer den Header und den Footer enthalten -->
     <div id="content">
@@ -84,6 +73,19 @@
         </aside>
         <!-- In dem Main-Abschnitt sind alle Sections mit Inhalten -->
         <main id="middle">
+            <section class="c1">
+                <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/header.png" alt="Titelbild mit Camper" />
+                    </div>
+                    <div class="text">
+                        <p class="de">Was Du bei der Planung beachten musst -
+                            über den Kabelquerschnitt zum richtigen Material</p>
+                        <p class="en">What you need to consider during planning -
+                            about cable cross-section to the right material</p>
+                    </div>
+                </div>
+            </section>
             <!-- Section zum Schritt Planung -->
             <hr id="planung">
             <section class="c3">
@@ -748,7 +750,7 @@
             </section>
             <!-- Section zum Schritt "Neverending-Project" -->
             <hr id="aber">
-            <section class="c2">
+            <section class="c1">
                 <div class="h2-p-box">
                     <h2 class="de">Aber...</h2>
                     <p class="de">Wenn wir ehrlich sind, ist man nie fertig und man hat immer neue Ideen...</p>
@@ -757,8 +759,6 @@
                     <button class="de"><a href="#arbeitsplatz-einrichten">Zurück zum Ausbau</a></button>
                     <button class="en"><a href="#arbeitsplatz-einrichten">Back to the removal</a></button>
                 </div>
-
-
             </section>
         </main>
         <!-- Rechts befindet sich das fixierte Sprachmenü -->
@@ -769,7 +769,7 @@
             </div>
         </aside>
     </div>
-    <footer class="c1">
+    <footer class="c3">
         <p>Elisabeth Edert 2022</p>
     </footer>
     <script src="main.js"></script>
