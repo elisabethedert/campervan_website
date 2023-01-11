@@ -18,7 +18,7 @@
         <!--Überschrift -->
         <div id="top-bar" class="c3">
             <h1 class="de">Von der Idee zum Campervan</h1>
-            <h1 class="en">From the idea <br> to a campervan</h1>
+            <h1 class="en">From the idea to a campervan</h1>
         </div>
     </header>
     <!-- In der div mit der id content ist der gesamet Webseiten-Inhalt außer den Header und den Footer enthalten -->
@@ -37,7 +37,7 @@
                         </label>
                     </div>
                 </div>
-                <div id="ankertags">
+                <div id="ankertags" onclick="toggleclose()">
                     <a class="de" href="#planung">Planung</a>
                     <a class="de" href="#besichtigung-kauf">Besichtigung<br> & Kauf</a>
                     <a class="de" href="#ueberlegungen">Überlegungen<br>am Fahrzeug</a>
@@ -46,10 +46,10 @@
                     <a class="de" href="#arbeitsplatz-einrichten">Arbeitsplatz <br> einrichten</a>
                     <a class="de" href="#erste-umbauten">Erste Umbauten</a>
                     <a class="de" href="#heizung-licht">Heizung & Licht</a>
-                    <a class="de" href="#moebelbau">Möbelbau <br>& Verbraucher</a>
+                    <a class="de" href="#moebelbau">Möbelbau</a>
                     <a class="de" href="#probewohnen">Probe-Wohnen</a>
-                    <a class="de" href="#verkleidung">Verkleidung <br> & Dekoration</a>
-                    <a class="de" href="#tuev">TÜV-Abnahme</a>
+                    <a class="de" href="#verkleidung">Verkleidung</a>
+                    <a class="de" href="#tuev">TÜV</a>
                     <a class="de" href="#ertse-reise">Erste Reise</a>
                     <a class="de" href="#aber">Aber...</a>
                     <a class="de" href="impressum.html">Impressum</a>
@@ -63,7 +63,7 @@
                     <a class="en" href="#heizung-licht">Heating & Light</a>
                     <a class="en" href="#moebelbau">Furniture making</a>
                     <a class="en" href="#probewohnen">Try out</a>
-                    <a class="en" href="#verkleidung">Cladding<br>& decoration</a>
+                    <a class="en" href="#verkleidung">Cladding</a>
                     <a class="en" href="#tuev">TÜV inspection</a>
                     <a class="en" href="#ertse-reise">First<br>real journey</a>
                     <a class="en" href="#aber">But...</a>
@@ -75,14 +75,14 @@
         <main id="middle">
             <section class="c1">
                 <div class="flex-img-text">
-                    <div class="bild">
-                        <img src="images/header.png" alt="Titelbild mit Camper" />
-                    </div>
                     <div class="text">
                         <p class="de">Was Du bei der Planung beachten musst -
                             über den Kabelquerschnitt zum richtigen Material</p>
                         <p class="en">What you need to consider during planning -
                             about cable cross-section to the right material</p>
+                    </div>
+                    <div class="bild">
+                        <img src="images/header.png" alt="Titelbild mit Camper" />
                     </div>
                 </div>
             </section>
@@ -333,7 +333,7 @@
                             <br>
                         </fieldset>
                         <button class="de" type="submit" onclick="datenuebernahme('de')">Berechnen</button>
-                        <p class="de" id="berechnet-de"></p>
+                        <p class="de" id="berechnet-de"><b>Ergebnis: </b></p>
                         <fieldset class="en">
                             <label for="kabellaenge-en"><b> Length of the cable - only one distance in meters
                                     (m):</b></label>
@@ -350,7 +350,7 @@
                             <br>
                         </fieldset>
                         <button class="en" type="submit" onclick="datenuebernahme('en')">Calculate</button>
-                        <p class="en" id="berechnet-en"></p>
+                        <p class="en" id="berechnet-en"><b>Result: </b></p>
                     </div>
                 </div>
             </section>
@@ -358,6 +358,9 @@
             <hr id="arbeitsplatz-einrichten">
             <section class="c3">
                 <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/arbeitsplatz.jpg" alt="Tauchsäge und ein Kaffee auf einer Sägeunterlage">
+                    </div>
                     <div class="text">
                         <h2 class="de">Arbeitsplatz einrichten</h2>
                         <p class="de">Bevor es dann nun endlich zur Sache geht brauchst du einen
@@ -387,9 +390,6 @@
                             <br><br>
                             Then, when you have everything, you can finally get started!
                         </p>
-                    </div>
-                    <div class="bild">
-                        <img src="images/arbeitsplatz.jpg" alt="Tauchsäge und ein Kaffee auf einer Sägeunterlage">
                     </div>
                 </div>
             </section>
@@ -517,8 +517,12 @@
             <hr id="moebelbau">
             <section class="c4">
                 <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/moebelbau-verbraucher.jpg"
+                            alt="Die ersten Möbel sind im Auto eingebaut, die Kiste ist noch in Arbeit">
+                    </div>
                     <div class="text">
-                        <h2 class="de">Möbelbau und Verbraucher</h2>
+                        <h2 class="de">Möbelbau</h2>
                         <p class="de">Während des Möbelbaus sieht man schnell Fortschritte und man kann
                             sich, wenn die Hauptcamperkomponenten im Auto sind, auch schon so
                             langsam vorstellen wie es mal werden soll. Je sauberer du nachmisst,
@@ -528,7 +532,7 @@
                             werden wie der Kühlschrank, Steckdosen oder die Wasserpumpe, wenn
                             du im Küchenblock eine Spüle mit Wasserhahn einbauen möchtest.
                         </p>
-                        <h2 class="en">Furniture making and consumer</h2>
+                        <h2 class="en">Furniture</h2>
                         <p class="en">During the furniture construction you can quickly see progress and you can
                             when the main camp components are in the car are already imagine how it will be. The cleaner
                             you
@@ -539,10 +543,6 @@
                             like the refrigerator, sockets or the water pump, if you want to install
                             a sink with faucet in the kitchen block.
                         </p>
-                    </div>
-                    <div class="bild">
-                        <img src="images/moebelbau-verbraucher.jpg"
-                            alt="Die ersten Möbel sind im Auto eingebaut, die Kiste ist noch in Arbeit">
                     </div>
                 </div>
             </section>
@@ -571,14 +571,14 @@
             <hr id="verkleidung">
             <section class="c4">
                 <div class="h2-p-box">
-                    <h2 class="de">Verkleidung und Dekoration</h2>
+                    <h2 class="de">Verkleidung</h2>
                     <p class="de">Um die Islolierung zu verstecken und das Auto noch wohnlicher zu bekommen, bringt
                         die Verkleidung von den Wänden eine ganze Menge. Auch die Anbringung von
                         Gardinen, kleinen Aufbewahrungsmöglichkeiten macht dein Wohnmobil schon richtig
                         gemütlich. Während deinen Probefahrten mit dem Camper hast du vielleicht
                         gemerkt, was da für dich am passensten ist.
                     </p>
-                    <h2 class="en">Cladding and decoration</h2>
+                    <h2 class="en">Cladding</h2>
                     <p class="en">To hide the islolation and get the car even more homely, brings
                         cladding from the walls quite a lot. Also the installation of
                         curtains, small storage possibilities makes your camper already really
@@ -628,6 +628,9 @@
             <hr id="tuev">
             <section class="c2">
                 <div class="flex-img-text">
+                    <div class="bild">
+                        <img src="images/tuev-mangelfrei.jpg" alt="Der TÜV hat den Ausbau als mangelfrei begutachtet">
+                    </div>
                     <div class="text">
                         <h2 class="de">TÜV Abnahme</h2>
                         <p class="de">Die lange Arbeit ist geschafft und du kannst zum TÜV gehen und dein Wohnmobil
@@ -650,7 +653,7 @@
                             Merkblatt hinaus gehen
                             und dir unseriös vorkommen, ist es okay den Prüfer zu wechseln.
                         </p>
-                        <h2 class="en">TÜV inspection</h2>
+                        <h2 class="en">TÜV</h2>
                         <p class="en">The long work is done and you can go to the TÜV and have your motorhome inspected.
                             Check beforehand if you have fulfilled all the conditions stated in the leaflet and make an
                             appointment
@@ -668,9 +671,6 @@
                             information sheet
                             and seems dubious to you, it is okay to change the examiner.
                         </p>
-                    </div>
-                    <div class="bild">
-                        <img src="images/tuev-mangelfrei.jpg" alt="Der TÜV hat den Ausbau als mangelfrei begutachtet">
                     </div>
                 </div>
             </section>

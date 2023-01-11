@@ -1,6 +1,11 @@
-Beschreibungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert (348500)
+Beschreibungen von Design- und Codeentscheidungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert (348500)
 
 Design:
+Header und Footer
+    - schlicht und umrahmend des inhaltsreichen Main-Abschnitts
+    - im Header befindet sich der Titel der Seite
+    - im Footer steht der Name des Autors der Seite (Elisabeth Edert)
+
 Farben
     - um etwas Lebendigkeit beim Scrollen in das Layout zu bringen und die Sections mit einzelnen Themen voneinander abzugrenzen wurden verschiedene
       Hintergrundfarben eingesetzt:
@@ -15,14 +20,16 @@ Farben
         - als dunklere Farbe im Hintergrund eingesetzt
 
 Font
-    - eine Standardfont (Gill Sans) für das gesamte Dokument verwendet, überall verfügbar, websicher, schlichter & leist lesbarer Stil
-    - Schriftgrößen: 
+  - eine Standardfont (Gill Sans) für das gesamte Dokument verwendet, überall verfügbar, websicher, schlichter & leist lesbarer Stil
+  - Schriftgrößen: 
 	- einheitlich aufgeteilt in Überschrften und Fließtext
 	- Titel groß und prägnant
 	- Kapitelüberschriften (H2) einheitlich
-	- Bildunterschriften sind Fließtext und kann einen fetten Titel haben, der das Bild in max. 2 Wörtern beschreibt
-    - die Farbe #4D4D4D ist ein dunkles grau und harmoniert besser als ein reines Schwarz mit den restlichen Farben
-		
+	- Bildunterschriften sind Fließtext und können einen fetten Titel haben, der das Bild in max. 2 Wörtern beschreibt
+  - die Farbe #4D4D4D ist ein dunkles grau und harmoniert besser als ein reines Schwarz mit den restlichen Farben
+	- die einzelnen Schriftgröße sollen sich voneinander abgrenzen um Kontraste zu schaffen
+  - um ein einheitliches Design zu schaffen sind die jeweiligen Schriftgrößen fest definiert und werden an anderen Stellen nicht verändert
+
 Bilder
     - groß aber nicht zu viel Raum einnehmend
     - standardisierte Größe von 1000x1000px (außer bei Bildern die nicht neben Text stehen), bewusst größer als auf der Webseite angezeigt
@@ -47,9 +54,13 @@ Unterteilung in Sections
     - Sections enthalten divs die ebenfalls Klassen zugewiesen sind. Diese Klassen enthalten Styles und können wiederverwendet werden
     - eine individuelle Kombination von Hintergrundfarben und Inhalten sind damit möglich
 
+Menü & Sprachbuttons
+    - sind als "sticky" markiert, damit sie auch während des Scrollens auf der Seite permanent zu sehen sind    
+
 Responsive Design
-    - zwei @media max-width Größen, um einen saubereren Wechsel zwischen den verschiedenen Breiten zu bekommen
-    - das seitliche Menü wechselt zum Ausklappmenü ab einer Breite von 1200px
+    - drei @media max-width Größen, um einen saubereren Wechsel zwischen den verschiedenen Breiten zu bekommen
+    - das seitliche Menü wechselt zum Ausklappmenü ab einer Breite von 1200px umPlatz zu sparen
+    - ist das Menü im schmalen Layout geöffnet und man klickt auf ein Kapitel schließt sich das Menü automatisch
 
 Sprachübersetzung
    - Seite wird als erstes auf Deutsch geladen, kann per Buttonklick auf Englisch übersetzt werden
@@ -63,7 +74,7 @@ Sprachübersetzung
 Rechner
    - in der html-Datei werden Ausgaben mithife von Patterns gefiltert
    - in der js-Funktion werden Variablen in Abhängigkeit von der Sprache erzeugt, welche die eingegebenen Werte enthalten
-   - der notewendige Querschnitt des Kabels wird berechnet
+   - der notewendige Querschnitt des Kabels wird nach der DIN Norm berechnet
    - mithilfe der langen if else Abfrage wird auf standardisierte Kabelquerschnitte gerundet, die im Baumarkt zu finden sind, 
      ein Puffer ist enthalten, um dem Kunden einen sicheren Wert geben zu können
    - ist der berechnete Kabelquerschnitt größer als 300mm wird ein Satz ausgegeben, der darauf hinweist
@@ -71,9 +82,7 @@ Rechner
 
 Allgemeine Hinweise:
    - Inspirationen aus dem Netz sind an den entsprechenden Stellen im Code vermerkt, die Inhalte sind auf meine Bedürnisse abgewandelt
-   - console.log() sind noch enthalten, werden bis zur finalen Abgabe entfernt
-   - Feinheiten wie einhetliche Größe der Bildunterschriften-Kästen folgen noch
-
+   - console-log's sind zur Demonstration im Screencast weiterhin enthalten
 
 
 

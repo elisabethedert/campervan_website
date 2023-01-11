@@ -1,5 +1,6 @@
 // Funktionen für das Ausklappen der Menüleiste
 var navig = document.getElementById("ankertags");
+var left = document.getElementById("left");
 
 function toggle() {
   console.log("toggle wird geklickt")
@@ -21,6 +22,13 @@ function responsive(mediaqu) {
     navig.style.display = "none";
   } else {
     navig.style.display = "block";
+  }
+}
+
+// Shcließt das Menü im schmalen Format, wenn ein Kapitel ausgewählt wird
+function toggleclose() {
+  if (mediaqu.matches) {
+    navig.style.display = "none";
   }
 }
 
@@ -73,7 +81,7 @@ const observer = new IntersectionObserver((entries) => {
 const boxenEinfaden = document.querySelectorAll(" .impr-text, .bild, .text, .boxen, .untereinander-bild-text, .h2-p-box, .eingabe, .zitat");
 boxenEinfaden.forEach((element) => observer.observe(element));
 
-// Berechnung des Kabelquerschnitts
+// Berechnung des Kabelquerschnitts und Ausgabe eines genormten Formates
 function datenuebernahme(sprache) {
   console.log("script datenübernahme");
   var widerstandKupferOhm = 0.0175;
@@ -88,10 +96,12 @@ function datenuebernahme(sprache) {
     var kabellaenge = document.getElementById("kabellaenge-en").value * 2;
     var verlustfaktor = document.getElementById("verlustfaktor-en").value / 100;
   }
-  
-  var querschnitt = (stromstaerke * widerstandKupferOhm * kabellaenge) / (verlustfaktor * 12);
+
+  //Querschnittsberechnung nach DIN abhängig von den Eingabeparametern
+  var querschnitt = (stromstaerke * widerstandKupferOhm * kabellaenge) / (verlustfaktor * 12); //12 für 12 Volt
   console.log(querschnitt);
 
+  //Rundung der Ausgabe auf einen im Baumarkt erhältlichen Querschnitt
   if (querschnitt < 0.7) {
     rueckgabe = "0,75";
   } else if (querschnitt >= 0.7 && querschnitt < 1.4) {
@@ -102,7 +112,7 @@ function datenuebernahme(sprache) {
     rueckgabe = "6";
   } else if (querschnitt >= 5 && querschnitt < 8) {
     rueckgabe = "10";
-  } else if (querschnitt >= 8 && querschnitt < 143) {
+  } else if (querschnitt >= 8 && querschnitt < 14) {
     rueckgabe = "16";
   } else if (querschnitt >= 14 && querschnitt < 23) {
     rueckgabe = "25";
@@ -121,19 +131,19 @@ function datenuebernahme(sprache) {
   } else if (querschnitt > 290) {
     rueckgabe = "xxx";
   }
-
+  // Rückgabe des Querschnitts in der entsprechenden Sprache
   if (sprache === 'de') {
-    document.getElementById("berechnet-de").innerHTML = "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen.";
+    document.getElementById("berechnet-de").innerHTML += "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen.";
     console.log("datenuebernahme-de");
     if (querschnitt > 290) {
-      document.getElementById("berechnet-de").innerHTML = "Checke nochmal deine Eingaben, das " +
+      document.getElementById("berechnet-de").innerHTML += "Checke nochmal deine Eingaben, das " +
         "Ergebnis ist zu groß für einen geeigneten Kabelquerschnitt.";
     }
   } else if (sprache === 'en') {
-    document.getElementById("berechnet-en").innerHTML = "Your cable cross section should be at least " + rueckgabe + " mm.";
+    document.getElementById("berechnet-en").innerHTML += "Your cable cross section should be at least " + rueckgabe + " mm.";
     console.log("datenuebernahme-en");
     if (querschnitt > 290) {
-      document.getElementById("berechnet-en").innerHTML = "Check your inputs, the result is too large " +
+      document.getElementById("berechnet-en").innerHTML += "Check your inputs, the result is too large " +
         "for a suitable cable cross section.";
     }
   }

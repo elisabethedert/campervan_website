@@ -4,7 +4,8 @@ body {
     margin: 0%;
 }
 
-/* Zeigt den englischen Text bei Aufruf der Seite nicht und zunächst nur den deutschen Text*/
+/* Zeigt den englischen Text bei Aufruf der Seite nicht und zunächst nur den deutschen Text
+   Die Englischen Menüpunkte sollen initial ebenfalls nicht angezeigt werden*/
 
 #ankertags .en,
 .en {
@@ -15,13 +16,7 @@ body {
     display: block;
 }
 
-/* Header und Footer Design
-    - schlicht und umrahmend des inhaltsreichen Main-Abschnitts
-    - im Header befindet sich der Titel der Seite, sowie ein Balken 
-      der fix bleibt und den Hintergrund für die Auwahlobjekte bildet
-    - im Footer steht der Name des Autors der Seite (Elisabeth Edert)
-*/
-
+/* Header */
 header {
     width: 100%;
     z-index: 1;
@@ -31,6 +26,7 @@ header {
     padding: 10px;
 }
 
+/* Mittelteil bestehend aus einer alles umfassenden Div "content", welche aside main und aside beinhaltet */
 #content {
     display: flex;
     flex-direction: row;
@@ -43,6 +39,7 @@ aside {
 
 #left {
     width: 15%;
+    padding-right: 0%;
 }
 
 #middle {
@@ -53,19 +50,17 @@ aside {
     width: 10%;
 }
 
+/* Footer */
 footer {
-    padding: 0% 15% 20px 15%;
+    padding: 0% 0% 0% 0%;
 }
 
 footer p {
-    padding-top: 15px;
+    padding-top: 10px;
     text-align: right;
 }
 
-/* Definition Schriftgrößen
-    - die einzelnen Schriftgröße sollen sich voneinander abgrenzen um Kontraste zu schaffen
-    - um ein einheitliches Design zu schaffen sind die jeweiligen Schriftgrößen fest definiert und werden an anderen Stellen nicht verändert
-*/
+/* Definition Schriftgrößen*/
 h1 {
     font-size: 3em;
     line-height: .9em;
@@ -76,31 +71,35 @@ h1 {
 h2 {
     font-size: 2.0em;
     line-height: 1.1em;
+    margin: unset;
+    /* margin unset reduziert ungewollte Lücken*/
 }
 
 h3 {
     font-size: 1.7em;
     line-height: 1em;
     font-style: italic;
+    margin: unset;
 }
 
-.c1 p,
-.c1 h2,
-.c1 h3,
-.c2 p,
-.c2 h2,
-.c2 h3,
-.c3 p,
-.c3 h2,
-.c3 h3,
-.c4 p,
-.c4 h2,
-.c4 h3,
-.c5 p,
-.c5 h2,
-.c5 h3 {
-    /* margin unset reduziert ungewollte Lücken*/
+p {
     margin: unset;
+}
+
+/* Button allgemein */
+button {
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #D3D8CB;
+}
+
+button:hover {
+    cursor: grab;
+    font-weight: 700;
 }
 
 /* Section-Styles*/
@@ -113,11 +112,7 @@ section {
 .c2,
 .c3,
 .c4 {
-    padding: 50px 10% 50px 10%;
-}
-
-.c5 {
-    padding: 0px 10% 50px 10%;
+    padding: 30px 10% 30px 10%;
 }
 
 .c1,
@@ -138,8 +133,12 @@ section {
 }
 
 /* Zusätzliche Styles für das Impressum */
+.c5 {
+    padding-top: 50px;
+}
+
 .c5 p {
-    margin-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 .c5 h2,
@@ -156,71 +155,18 @@ hr {
     visibility: hidden;
     height: 0px !important;
     position: absolute;
-    margin: -70px;
+    margin: -50px;
 }
 
 /* Navigations-Styles*/
-#sprache {
-    position: sticky;
-    top: 0;
-    background: #F5F5F5;
-}
-
-#button-en {
-    font-weight: 500;
-    background-color: #D9D9D9;
-}
-
-#button-de {
-    font-weight: 900;
-    background-color: #D9D9D9;
-}
-
-button {
-    display: inline-block;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: none;
-    margin-top: 25px;
-    margin-left: 8px;
-    padding: 10px;
-}
-
-button a {
-    color: #4D4D4D;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.15em;
-}
-
-button:hover {
-    cursor: grab;
-    font-weight: 700;
-}
-
-.c2 button {
-    background-color: #D9D9D9;
-}
-
-#sprache li {
-    margin-right: 25px;
-}
-
-#sprache ul {
-    list-style: none;
-    padding: 0%;
-}
-
-/* Navigation links */
+/* links Menü */
 .mainnav {
-    overflow: hidden;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    position: sticky;
+    top: 10px;
 }
 
-.mainnav #ankertags {
-    display: block;
-    background: #F5F5F5;
+.mainnav a:hover {
+    font-weight: 700;
 }
 
 #nav {
@@ -229,17 +175,39 @@ button:hover {
     padding-left: 40px;
 }
 
+#ankertags {
+    position: sticky;
+    display: block;
+    background: #F5F5F5;
+}
+
+#ankertags a {
+    color: #4D4D4D;
+    background: #F5F5F5;
+    width: auto;
+    padding: 10px 20px 3px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.sichtbar {
+    /* Der sichtbare Teil des Menüs ist das Logo, über welches man von überall zurück zur Startseite gelangt. */
+    margin-top: 10px;
+}
+
+.sichtbar img {
+    width: 28px;
+}
+
 .menubars {
-    padding-left: 20px;
     display: none;
 }
 
 .hamburg {
     display: block;
-    position: fixed;
+    position: sticky;
     width: 75px;
     height: 50px;
-    margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
     cursor: grab;
@@ -273,45 +241,28 @@ input#menu {
     display: none
 }
 
-.sichtbar {
-    /* Der sichtbare Teil des Menüs ist das Logo, über welches man von überall zurück zur Startseite gelangt. */
-    margin-top: 10px;
+/* rechts Sprachauswahl */
+#sprache {
+    position: sticky;
+    top: 20px;
+    background: #F5F5F5;
+    margin-left: 25px;
+    padding-right: 10px;
 }
 
-.sichtbar img {
-    width: 28px;
+#button-en {
+    font-weight: 500;
+    background-color: #D9D9D9;
+    margin-left: 0px;
 }
 
-#ankertags a {
-    color: #4D4D4D;
-    width: auto;
-    padding: 12px 20px 5px 40px;
-    text-decoration: none;
-    display: block;
+#button-de {
+    font-weight: 900;
+    background-color: #D9D9D9;
+    margin-left: 0px;
 }
 
-.mainnav a.icon {
-    display: block;
-    position: absolute;
-    padding: 14px 20px;
-    left: 25px;
-    top: 10px;
-}
-
-.mainnav a:hover {
-    font-weight: 700;
-}
-
-/* Styles für einzelnde Bilder */
-.bild {
-    width: 50%;
-}
-
-.bild img {
-    width: 100%;
-}
-
-/* Styles für Sections, die ein Div mit Text enthalten*/
+/* Styles für Sections, die ein Div mit einer h2 und Fließtext enthalten*/
 .h2-p-box {
     background: #F5F5F5;
     padding: 15px;
@@ -350,14 +301,23 @@ input#menu {
 .boxen p {
     background: #F5F5F5;
     padding: 5%;
+    height: 100px;
 }
 
-/* Styles für Sections, die Bild & Text beinhalten, die Class ".bild" wird aus der ersten Titel-Section für diese Sections widerverwendet */
+/* Styles für Sections, die Bild & Text beinhalten */
 .flex-img-text {
     display: flex;
     gap: 1em;
     align-items: center;
     justify-content: center;
+}
+
+.bild {
+    width: 50%;
+}
+
+.bild img {
+    width: 100%;
 }
 
 .text {
@@ -383,11 +343,6 @@ input#menu {
     width: 100%;
 }
 
-.untereinander-bild-text p,
-.untereinander-bild-text h2 {
-    background: #F5F5F5;
-}
-
 .untereinander-bild-text h2 {
     padding: 2% 2% 2% 2%;
 }
@@ -396,12 +351,12 @@ input#menu {
     padding: 0% 2% 2% 2%;
 }
 
-/* Styles für Sections, die Zitate enthalten*/
-.zitat h3,
-.zitat p {
+.untereinander-bild-text p,
+.untereinander-bild-text h2 {
     background: #F5F5F5;
 }
 
+/* Styles für Sections, die Zitate enthalten*/
 .zitat h3 {
     padding: 2% 2% 2% 2%;
 }
@@ -410,10 +365,22 @@ input#menu {
     padding: 0% 2% 2% 2%;
 }
 
+.zitat h3,
+.zitat p {
+    background: #F5F5F5;
+}
+
 /* Rechner */
 /* Inspiration:  https://www.w3schools.com/css/css_form.asp */
 .eingabe {
     margin-top: 20px;
+}
+
+.eingabe button {
+    background: #D3D8CB;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.0em;
 }
 
 .eingabe input {
@@ -432,25 +399,23 @@ input:invalid {
 }
 
 fieldset {
+    display: flex;
     border: none;
     padding: 0;
-}
-
-.eingabe button {
-    background: #F5F5F5;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.0em;
+    width: 50%;
 }
 
 #berechnet-en,
 #berechnet-de {
-    margin-top: 10px;
+    margin-top: 25px;
+    background: #F5F5F5;
+    padding: 10px;
+    width: auto;
+
 }
 
 /* Einfaden der Elemente 
 Inspiration: https://youtu.be/T33NN_pPeNI*/
-.ueberschrift,
 .impr-text,
 .bild,
 .text,
@@ -474,41 +439,59 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 */
 
-/* Erster Unbruch bei 1200px*/
+/* Erster Unbruch bei 1200px
+   Überschriften und Bilder werden mit dieser Breite nicht abgeschnitten */
 @media only screen and (max-width: 1200px) {
 
-    /* Überschriften und Bilder werden mit dieser Breite nicht abgeschnitten */
-
-    #sprache {
-        left: 80%;
+    /* Allgemeine Anpassungen */
+    #right {
+        float: right;
+        width: 15%;
     }
 
-    .flex-text-img-top {
-        flex-direction: column;
+    main {
+        float: left;
+        width: 70%;
     }
 
+    #left {
+        width: 15%;
+        padding-right: 0%;
+    }
+
+    hr {
+        margin: 0px;
+    }
+
+    /* Bild und Text anpassen */
     .flex-img-text {
         flex-direction: column-reverse;
     }
 
-    .bildrechts img,
     .text {
         width: 100%;
+        padding: 0px;
     }
 
-    .bildrechts,
-    .text h2,
     .text p {
-        margin-left: 0%;
-        padding-left: 0%;
+        padding: 15px;
     }
 
     .text h2 {
         padding-bottom: 0%;
     }
 
+    .text h2,
+    .text p {
+        margin-left: 0%;
+    }
+
     .bild {
         width: 100%;
+    }
+
+    .boxen p {
+        height: 170px;
     }
 
     /* Navigation */
@@ -520,19 +503,63 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         font-weight: 500;
     }
 
+    #nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .sichtbar {
+        margin-left: 10px;
+    }
+
+    #ankertags a {
+        width: 100%;
+        padding: 10px 250px 3px 40px;
+    }
+
     .menubars {
         display: block;
     }
 }
 
 /* Zweiter Unbruch bei 600px*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 830px) {
+    .boxen p {
+        height: 220px;
+    }
+}
 
-    #sprache {
-        left: 75%;
+/* Dritter Unbruch bei 600px*/
+@media only screen and (max-width: 650px) {
+
+    /* Allgemeine Anpassungen */
+    h1 {
+        font-size: 2em;
     }
 
-    /* Nebeneinander gestellte Boxen reihen sich untereinander ein */
+    /* Navigation & Sprachbuttons */
+    #nav {
+        padding-left: 10px;
+    }
+
+    .menubars {
+        padding-left: 0px;
+    }
+
+    #sprache {
+        margin-left: 0px;
+    }
+
+    #button-de,
+    #button-en {
+        margin-left: 15px;
+    }
+
+    /* Nebeneinander gestellte Boxen reihen sich untereinander ein
+       Fieldseteingabefelder bekommen die volle Breite etc.
+
+     */
     .drei-boxen {
         flex-direction: column;
     }
@@ -541,11 +568,20 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         width: 100%;
     }
 
+    .boxen p {
+        height: auto;
+    }
+
+    fieldset {
+        width: 100%;
+    }
+
     .untereinander-bild-text p,
     .untereinander-bild-text h2 {
         padding: 5%;
     }
 
+    /* Einfaden der Objekte */
     .impr-text,
     .bild,
     .text,
@@ -559,9 +595,4 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         filter: blur(0);
         transform: translateX(0);
     }
-
-    h1 {
-        font-size: 2em;
-    }
-
 }
