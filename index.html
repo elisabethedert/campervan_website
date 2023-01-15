@@ -16,7 +16,7 @@
 <body>
     <header>
         <!--Überschrift -->
-        <div id="top-bar" class="c3">
+        <div id="top-bar" class="c2">
             <h1 class="de">Von der Idee zum Campervan</h1>
             <h1 class="en">From the idea to a campervan</h1>
         </div>
@@ -51,7 +51,7 @@
                     <a class="de" href="#verkleidung">Verkleidung</a>
                     <a class="de" href="#tuev">TÜV</a>
                     <a class="de" href="#ertse-reise">Erste Reise</a>
-                    <a class="de" href="#aber">Aber...</a>
+                    <a class="de" href="#roomtour">Roomtour</a>
                     <a class="de" href="impressum.html">Impressum</a>
                     <a class="en" href="#planung">Planing</a>
                     <a class="en" href="#besichtigung-kauf">Visiting<br>& purchase</a>
@@ -66,7 +66,7 @@
                     <a class="en" href="#verkleidung">Cladding</a>
                     <a class="en" href="#tuev">TÜV inspection</a>
                     <a class="en" href="#ertse-reise">First<br>real journey</a>
-                    <a class="en" href="#aber">But...</a>
+                    <a class="en" href="#roomtour">Roomtour</a>
                     <a class="en" href="impressum.html">Imprint</a>
                 </div>
             </div>
@@ -75,14 +75,14 @@
         <main id="middle">
             <section class="c1">
                 <div class="flex-img-text">
-                    <div class="text">
-                        <p class="de">Was Du bei der Planung beachten musst -
-                            über den Kabelquerschnitt zum richtigen Material</p>
-                        <p class="en">What you need to consider during planning -
-                            about cable cross-section to the right material</p>
-                    </div>
                     <div class="bild">
-                        <img src="images/header.png" alt="Titelbild mit Camper" />
+                        <img src="images/header.jpg" alt="Titelbild mit Camper" />
+                    </div>
+                    <div class="text">
+                        <p class="de"><b>Was Du bei der Planung beachten musst -
+                                über den Kabelquerschnitt zum richtigen Material</b></p>
+                        <p class="en"><b>What you need to consider during planning -
+                                about cable cross-section to the right material</b></p>
                     </div>
                 </div>
             </section>
@@ -109,7 +109,7 @@
                         van, in which you can also cook and which might even have an integrated
                         maybe even a wet cell is integrated? Also consider
                         how old your car should be at most, when you are looking for a
-                        used car.</p>
+                        used car. </p>
                 </div>
                 <div class="drei-boxen">
                     <div class="boxen">
@@ -333,24 +333,29 @@
                             <br>
                         </fieldset>
                         <button class="de" type="submit" onclick="datenuebernahme('de')">Berechnen</button>
-                        <p class="de" id="berechnet-de"><b>Ergebnis: </b></p>
+
                         <fieldset class="en">
                             <label for="kabellaenge-en"><b> Length of the cable - only one distance in meters
                                     (m):</b></label>
                             <br>
-                            <input id="kabellaenge-en" name="kabellaenge" type="text">
+                            <input id="kabellaenge-en" name="kabellaenge" type="text" pattern="[0-9]+">
                             <br>
                             <label for="maxstrom-en"><b>Maximum current in amps (A):</b></label>
                             <br>
-                            <input id="maxstrom-en" name="maxstrom" type="text">
+                            <input id="maxstrom-en" name="maxstrom" type="text" pattern="[0-9]+">
                             <br>
                             <label for="verlustfaktor-en"><b>Loss factor in percent (%):</b></label>
                             <br>
-                            <input id="verlustfaktor-en" name="verlustfaktor" type="text">
+                            <input id="verlustfaktor-en" name="verlustfaktor" type="text" pattern="[0-9]+">
                             <br>
                         </fieldset>
                         <button class="en" type="submit" onclick="datenuebernahme('en')">Calculate</button>
-                        <p class="en" id="berechnet-en"><b>Result: </b></p>
+                    </div>
+                    <div class="ergebnis">
+                        <p class="de"><b>Ergebnis: </b></p>
+                        <p class="de" id="berechnet-de"></p>
+                        <p class="en"><b>Result: </b></p>
+                        <p class="en" id="berechnet-en"></p>
                     </div>
                 </div>
             </section>
@@ -749,13 +754,18 @@
                 </div>
             </section>
             <!-- Section zum Schritt "Neverending-Project" -->
-            <hr id="aber">
+            <hr id="roomtour">
             <section class="c1">
                 <div class="h2-p-box">
-                    <h2 class="de">Aber...</h2>
-                    <p class="de">Wenn wir ehrlich sind, ist man nie fertig und man hat immer neue Ideen...</p>
-                    <h2 class="en">But...</h2>
-                    <p class="en">If we are honest, you are never finished and you always have new ideas...</p>
+                    <video controls poster="images/thumbnail.png">
+                        <source src="images/video_roomtour.mp4" type="video/mp4" alt="Roomtour durch meinen Camper">
+                    </video>
+                    <h2 class="de">Roomtour</h2>
+                    <p class="de">Und wenn wir ehrlich sind ist man nie mit seinem Umbau fertig.
+                        Wenn man genau hinschaut sieht man immer noch Baustellen oder es gibt schon neue Ideen...</p>
+                    <h2 class="en">Roomtour</h2>
+                    <p class="en">And if we are honest, you are never finished with your conversion. If you look closely
+                        you can still see construction sites or there are already new ideas...</p>
                     <button class="de"><a href="#arbeitsplatz-einrichten">Zurück zum Ausbau</a></button>
                     <button class="en"><a href="#arbeitsplatz-einrichten">Back to the removal</a></button>
                 </div>
@@ -769,10 +779,9 @@
             </div>
         </aside>
     </div>
-    <footer class="c3">
+    <footer class="c2">
         <p>Elisabeth Edert 2022</p>
     </footer>
     <script src="main.js"></script>
 </body>
-
 </html>

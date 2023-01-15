@@ -1,3 +1,5 @@
+//Autor: "Elisabeth Edert"
+
 Beschreibungen von Design- und Codeentscheidungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert (348500)
 
 Design:
@@ -16,6 +18,7 @@ Farben
         Grün-Töne
         - eine lebendige und naütüliche Farbe, passt zum Thema Camping
         - Grün ist die Komplementärfarbe von rot (dem Camper auf den Fotos)
+        - für Buttons eingesetzt
         dunkleres Grau
         - als dunklere Farbe im Hintergrund eingesetzt
 
@@ -48,7 +51,7 @@ Blurr Effekt beim Scrollen
 
 
 Code:
-Unterteilung in Sections
+Unterteilung in Sections 
     - Übersichtlichkeit im Code: Abschnitte werden deutlich
     - Zuweisung der Sections zu Klassen, die Hintergundfarben zuordnen
     - Sections enthalten divs die ebenfalls Klassen zugewiesen sind. Diese Klassen enthalten Styles und können wiederverwendet werden

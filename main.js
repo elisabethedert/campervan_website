@@ -1,7 +1,22 @@
-// Funktionen für das Ausklappen der Menüleiste
-var navig = document.getElementById("ankertags");
-var left = document.getElementById("left");
+//Autor: "Elisabeth Edert"
 
+// Funktionen für das Ausklappen der Menüleiste im responsive Design
+var navig = document.getElementById("ankertags");
+var mediaqu = window.matchMedia("(max-width: 1200px)") // Breite bei der umgesprungen werden soll
+
+//Seitenmenü wird ab einer Breite nicht mehr sichtbar und wird zum ausklappen
+function responsive(mediaqu) {
+  if (mediaqu.matches) { // Wenn die Mediaqueries mit der Seitenbreite übereinstimmen 
+    navig.style.display = "none";
+  } else {
+    navig.style.display = "block";
+  }
+}
+
+responsive(mediaqu)
+mediaqu.addListener(responsive) // addListener hinzufügen
+
+// Hier wird das Mneü geöffnet, wenn auf die drei Balken geklickt wird
 function toggle() {
   console.log("toggle wird geklickt")
   if (navig.style.display === "none") {
@@ -13,19 +28,7 @@ function toggle() {
   }
 }
 
-var mediaqu = window.matchMedia("(max-width: 1200px)") // Breite bei der umgesprungen werden soll
-responsive(mediaqu)
-mediaqu.addListener(responsive) // addListener hinzufügen
-
-function responsive(mediaqu) {
-  if (mediaqu.matches) { // Wenn die Mediaqueries mit der Seitenbreite übereinstimmen
-    navig.style.display = "none";
-  } else {
-    navig.style.display = "block";
-  }
-}
-
-// Shcließt das Menü im schmalen Format, wenn ein Kapitel ausgewählt wird
+// Schließt das Menü im schmalen Format, wenn ein Kapitel ausgewählt wird
 function toggleclose() {
   if (mediaqu.matches) {
     navig.style.display = "none";
@@ -46,6 +49,7 @@ function trans(sprache) {
       spracheEn[i].style.display = "block";
       buttonEn.style.fontWeight = "900";
     } else {
+      console.log("DE gegklickt");
       spracheEn[i].style.display = "none";
       buttonEn.style.fontWeight = "500";
     }
@@ -53,7 +57,6 @@ function trans(sprache) {
 
   for (let i = 0; i < spracheDe.length; i++) {
     if (sprache === 'en') {
-      console.log("DE gegklickt");
       spracheDe[i].style.display = "none";
       buttonDe.style.fontWeight = "500";
     } else {
@@ -82,14 +85,14 @@ const boxenEinfaden = document.querySelectorAll(" .impr-text, .bild, .text, .box
 boxenEinfaden.forEach((element) => observer.observe(element));
 
 // Berechnung des Kabelquerschnitts und Ausgabe eines genormten Formates
+var widerstandKupferOhm = 0.0175;
+var rueckgabe = "";
+
 function datenuebernahme(sprache) {
   console.log("script datenübernahme");
-  var widerstandKupferOhm = 0.0175;
-  var rueckgabe = "";
-
   if (sprache === 'de') {
     var stromstaerke = document.getElementById("maxstrom-de").value;
-    var kabellaenge = document.getElementById("maxstrom-de").value * 2;
+    var kabellaenge = document.getElementById("kabellaenge-de").value * 2;
     var verlustfaktor = document.getElementById("verlustfaktor-de").value / 100;
   } else if (sprache === 'en') {
     var stromstaerke = document.getElementById("maxstrom-en").value;
@@ -129,23 +132,26 @@ function datenuebernahme(sprache) {
   } else if (querschnitt >= 145 && querschnitt <= 290) {
     rueckgabe = "300";
   } else if (querschnitt > 290) {
-    rueckgabe = "xxx";
+    rueckgabe = "zugroßeEingabe";
+  } else if (isNaN(querschnitt)) {
+    rueckgabe = "error";
   }
   // Rückgabe des Querschnitts in der entsprechenden Sprache
   if (sprache === 'de') {
-    document.getElementById("berechnet-de").innerHTML += "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen.";
-    console.log("datenuebernahme-de");
-    if (querschnitt > 290) {
-      document.getElementById("berechnet-de").innerHTML += "Checke nochmal deine Eingaben, das " +
+    if (rueckgabe === "zugroßeEingabe") {
+      document.getElementById("berechnet-de").innerHTML = "Checke nochmal deine Eingaben, das " +
         "Ergebnis ist zu groß für einen geeigneten Kabelquerschnitt.";
-    }
-  } else if (sprache === 'en') {
-    document.getElementById("berechnet-en").innerHTML += "Your cable cross section should be at least " + rueckgabe + " mm.";
-    console.log("datenuebernahme-en");
-    if (querschnitt > 290) {
-      document.getElementById("berechnet-en").innerHTML += "Check your inputs, the result is too large " +
+    } else
+      document.getElementById("berechnet-de").innerHTML = "Dein Kabelquerschnitt sollte mindestens " + rueckgabe + " mm betragen.";
+    console.log("datenuebernahme-de");
+
+  } if (sprache === 'en') {
+    if (rueckgabe === "zugroßeEingabe") {
+      document.getElementById("berechnet-en").innerHTML = "Check your inputs, the result is too large " +
         "for a suitable cable cross section.";
-    }
+    } else
+      document.getElementById("berechnet-en").innerHTML = "Your cable cross section should be at least " + rueckgabe + " mm.";
+    console.log("datenuebernahme-en");
   }
   console.log(rueckgabe);
 }
