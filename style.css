@@ -24,7 +24,7 @@ header {
 }
 
 #top-bar {
-    padding: 10px;
+    padding-block: 20px;
 }
 
 /* Mittelteil bestehend aus einer alles umfassenden Div "content", welche aside main und aside beinhaltet */
@@ -122,15 +122,15 @@ section {
 }
 
 .c2 {
-    background-color: #D3D8CB; /* helles grüngrau */
+    background-color: #F5F5F5; /* helles grüngrau */
 }
 
 .c3 {
-    background-color: #D9D9D9; /* grau */
+    background-color: #F5F5F5; /* grau */
 }
 
 .c4 {
-    background-color: #B9BCB4; /* dunkleres grüngrau */
+    background-color: #F5F5F5; /* dunkleres grüngrau */
 }
 
 /* Zusätzliche Styles für das Impressum */
@@ -150,13 +150,14 @@ section {
 
 /* hr dient als Anker für die Sprungmarken, besitzt aber kein Design*/
 hr {
-    border: none;
+    /* border: none; */
     margin-block-start: 0em;
     margin-block-end: 0em;
-    visibility: hidden;
-    height: 0px !important;
-    position: absolute;
-    margin: 0px;
+    /* visibility: hidden; */
+    /* height: 1px !important; */
+    /* position: absolute; */
+    /* margin: 1px; */
+    border: 1px solid #e8ece0;
 }
 
 /* Navigations-Styles*/
@@ -267,10 +268,10 @@ input#menu {
 /* Styles für Sections, die ein Div mit einer h2 und Fließtext enthalten*/
 .h2-p-box {
     background: #F5F5F5;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
-.h2-p-box h2 {
+.h2-p-box h2, .h2-p-box p {
     padding-bottom: 2%;
 }
 
@@ -288,7 +289,6 @@ input#menu {
     flex-direction: row;
     justify-content: center;
     gap: 1em;
-    margin-top: 2%;
 }
 
 .boxen {
@@ -302,7 +302,7 @@ input#menu {
 
 .boxen p {
     background: #F5F5F5;
-    padding: 5%;
+    padding-block: 5%;
     height: 100px;
 }
 
@@ -329,11 +329,11 @@ input#menu {
 }
 
 .text h2 {
-    padding: 2% 2% 2% 2%;
+    padding-bottom: 2%;
 }
 
 .text p {
-    padding: 0% 2% 2% 2%;
+    padding-bottom: 2%;
 }
 
 /* Styles für Sections, die ein Div mit Bild und darunter Text beinhalten*/
@@ -346,11 +346,11 @@ input#menu {
 }
 
 .untereinander-bild-text h2 {
-    padding: 2% 2% 2% 2%;
+    padding-bottom: 2%;
 }
 
 .untereinander-bild-text p {
-    padding: 0% 2% 2% 2%;
+    padding-bottom: 2%;
 }
 
 .untereinander-bild-text p,
@@ -360,11 +360,11 @@ input#menu {
 
 /* Styles für Sections, die Zitate enthalten*/
 .zitat h3 {
-    padding: 2% 2% 2% 2%;
+    padding-block: 2%;
 }
 
 .zitat p {
-    padding: 0% 2% 2% 2%;
+    padding-block: 2%;
 }
 
 .zitat h3,
@@ -380,7 +380,6 @@ input#menu {
 
 .eingabe button {
     background: #D3D8CB;
-    text-decoration: none;
     font-weight: 500;
     font-size: 1.0em;
 }
@@ -390,7 +389,9 @@ input#menu {
     padding: 12px 20px;
     margin: 8px 0px 20px 0px;
     display: inline-block;
-    border: none;
+    border: 1px solid #D3D8CB; /* helles grüngrau */
+    border-radius: 4px;    
+    text-decoration: none;
     border-radius: 4px;
     box-sizing: border-box;
     background: #F5F5F5;
@@ -409,7 +410,8 @@ fieldset {
 
 .ergebnis {
     margin-top: 25px;
-    background: #F5F5F5;
+    border-bottom: 1px solid #D3D8CB;
+    width: 50%;
     padding: 10px;
 }
 
@@ -480,9 +482,9 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
         padding: 0px;
     }
 
-    .text p {
+    /* .text p {
         padding: 15px;
-    }
+    } */
 
     .text h2 {
         padding-bottom: 0%;
@@ -498,7 +500,7 @@ Inspiration: https://youtu.be/T33NN_pPeNI*/
     }
 
     .boxen p {
-        height: 170px;
+        /* height: 170px; */
     }
 
     /* Navigation */
