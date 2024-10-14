@@ -76,7 +76,7 @@ h2 {
     /* margin unset reduziert ungewollte Lücken*/
 }
 
-h3 {
+h3, blockquote {
     font-size: 1.7em;
     line-height: 1em;
     font-style: italic;
@@ -359,7 +359,7 @@ input#menu {
 }
 
 /* Styles für Sections, die Zitate enthalten*/
-.zitat h3 {
+.zitat blockquote {
     padding-block: 2%;
 }
 
@@ -367,7 +367,7 @@ input#menu {
     padding-block: 2%;
 }
 
-.zitat h3,
+.zitat blockquote,
 .zitat p {
     background: #F5F5F5;
 }
