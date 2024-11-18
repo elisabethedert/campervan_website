@@ -73,11 +73,6 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
-    // else wird benötigt, wenn man mehr als einmal die Elemente einfaden lassen möchte
-    // Ich denke das wird an dieser Stelle aber zu viel und sorgt für zu viel Unruhe
-    // else {
-    //   entry.target.classList.remove("show");
-    // }
   });
 });
 
