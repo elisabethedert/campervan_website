@@ -1,6 +1,6 @@
 //Autor: "Elisabeth Edert"
 
-Beschreibungen von Design- und Codeentscheidungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert (348500)
+Beschreibungen von Design- und Codeentscheidungen zur Webseite "Ausbau eines Campervans" von Elisabeth Edert
 
 Design:
 Header und Footer
